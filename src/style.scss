@@ -1,0 +1,36 @@
+$primary: hsl(0, 100%, 40%);
+
+.section {
+  .title {
+  }
+}
+
+.tile.is-ancestor {
+  .is-parent {
+    @extend .tile;
+
+    .is-child {
+      @extend .tile;
+      @extend .notification;
+    }
+  }
+}
+
+.tags {
+  .tag {
+    @extend .is-dark;
+  }
+}
+
+.table {
+  @extend .is-fullwidth;
+  @extend .is-striped;
+}
+
+.footer {
+  @extend .has-background-dark;
+  @extend .has-text-white;
+}
+
+// Import Bulma
+@import "../node_modules/bulma/bulma.sass";
