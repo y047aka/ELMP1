@@ -5,20 +5,24 @@ $primary: hsl(0, 100%, 40%);
   }
 }
 
-.tile.is-ancestor {
-  .is-parent {
-    @extend .tile;
+.columns {
+  .column {
+    a {
+      .notification {
+        @extend .is-light;
 
-    .is-child {
-      @extend .tile;
-      @extend .notification;
+        .title {
+          @extend .is-4;
+        }
+
+        .subtitle {
+          @extend .is-6;
+        }
+
+        p {
+        }
+      }
     }
-  }
-}
-
-.tags {
-  .tag {
-    @extend .is-dark;
   }
 }
 
