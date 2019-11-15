@@ -68,7 +68,7 @@ view _ =
                 [ div [ class "hero-body container" ]
                     [ h1 [ class "title" ] [ text "ELMP1" ]
                     , h2 [ class "subtitle" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
-                    , p [] [ text "2019年12月7日 13:00〜,  東京都内にて" ]
+                    , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
                     ]
                 ]
             , section [ id "concept", class "section" ]
@@ -171,7 +171,15 @@ view _ =
                             ]
                         , tr []
                             [ th [] [ text "会場" ]
-                            , td [] [ text "東京都内（TBA）" ]
+                            , td []
+                                [ text "〒106-0032"
+                                , br [] []
+                                , text "東京都港区六本木3丁目2−1"
+                                , br [] []
+                                , text "住友不動産六本木グランドタワー 43階"
+                                , br [] []
+                                , text "Fringe81株式会社様 会議室"
+                                ]
                             ]
                         , tr []
                             [ th [] [ text "内容" ]

@@ -5272,7 +5272,7 @@ var $author$project$Main$view = function (_v0) {
 										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$text('2019年12月7日 13:00〜,  東京都内にて')
+												$elm$html$Html$text('2019年12月7日 13:00〜, 六本木にて')
 											]))
 									]))
 							])),
@@ -5789,7 +5789,13 @@ var $author$project$Main$view = function (_v0) {
 														_List_Nil,
 														_List_fromArray(
 															[
-																$elm$html$Html$text('東京都内（TBA）')
+																$elm$html$Html$text('〒106-0032'),
+																A2($elm$html$Html$br, _List_Nil, _List_Nil),
+																$elm$html$Html$text('東京都港区六本木3丁目2−1'),
+																A2($elm$html$Html$br, _List_Nil, _List_Nil),
+																$elm$html$Html$text('住友不動産六本木グランドタワー 43階'),
+																A2($elm$html$Html$br, _List_Nil, _List_Nil),
+																$elm$html$Html$text('Fringe81株式会社様 会議室')
 															]))
 													])),
 												A2(
