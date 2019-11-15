@@ -5731,7 +5731,11 @@ var $author$project$Main$view = function (_v0) {
 											[
 												A2(
 												$elm$html$Html$a,
-												_List_Nil,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href('https://elm-jp.connpass.com/event/156016/'),
+														$elm$html$Html$Attributes$target('_blank')
+													]),
 												_List_fromArray(
 													[
 														$elm$html$Html$text('Connpass')
@@ -5825,7 +5829,7 @@ var $author$project$Main$view = function (_v0) {
 																		_List_Nil,
 																		_List_fromArray(
 																			[
-																				$elm$html$Html$text('ライトニングトーク（事前募集 + 飛び入り）')
+																				$elm$html$Html$text('ライトニングトーク（事前募集）')
 																			]))
 																	]))
 															]))
@@ -5838,7 +5842,19 @@ var $author$project$Main$view = function (_v0) {
 											[
 												$elm$html$Html$text('詳細が決定し次第、更新します'),
 												A2($elm$html$Html$br, _List_Nil, _List_Nil),
-												$elm$html$Html$text('更新の際には、戸塚のTwitter（@y047aka）から情報発信予定')
+												$elm$html$Html$text('更新の際には、戸塚のTwitter（'),
+												A2(
+												$elm$html$Html$a,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href('https://twitter.com/y047aka'),
+														$elm$html$Html$Attributes$target('_blank')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text('@y047aka')
+													])),
+												$elm$html$Html$text('）から情報発信予定')
 											]))
 									]))
 							]))
@@ -5863,7 +5879,7 @@ var $author$project$Main$view = function (_v0) {
 							]))
 					]))
 			]),
-		title: 'ELMP1'
+		title: 'Elm Prototyping : Class 1'
 	};
 };
 var $author$project$Main$main = $elm$browser$Browser$document(
