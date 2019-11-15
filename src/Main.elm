@@ -52,7 +52,7 @@ update msg model =
 
 view : Model -> Document Msg
 view _ =
-    { title = "ELMP1"
+    { title = "Elm Prototyping : Class 1"
     , body =
         [ header [ class "navbar is-dark" ]
             [ h1 [ class "navbar-brand" ]
@@ -157,7 +157,7 @@ view _ =
                 [ div [ class "container" ]
                     [ h1 [ class "title" ] [ text "詳細情報" ]
                     , p [ class "content" ]
-                        [ a [] [ text "Connpass" ]
+                        [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "Connpass" ]
                         , text " から参加登録をしてください。"
                         ]
                     , table [ class "table" ]
@@ -178,7 +178,7 @@ view _ =
                             , td [ class "content" ]
                                 [ ul []
                                     [ li [] [ text "基調講演：Andrey Kuzmin (@w0rm)" ]
-                                    , li [] [ text "ライトニングトーク（事前募集 + 飛び入り）" ]
+                                    , li [] [ text "ライトニングトーク（事前募集）" ]
                                     ]
                                 ]
                             ]
@@ -186,7 +186,9 @@ view _ =
                     , p []
                         [ text "詳細が決定し次第、更新します"
                         , br [] []
-                        , text "更新の際には、戸塚のTwitter（@y047aka）から情報発信予定"
+                        , text "更新の際には、戸塚のTwitter（"
+                        , a [ href "https://twitter.com/y047aka", target "_blank" ] [ text "@y047aka" ]
+                        , text "）から情報発信予定"
                         ]
                     ]
                 ]
