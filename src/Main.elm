@@ -177,7 +177,11 @@ view _ =
                             [ th [] [ text "内容" ]
                             , td [ class "content" ]
                                 [ ul []
-                                    [ li [] [ text "基調講演：Andrey Kuzmin (@w0rm)" ]
+                                    [ li []
+                                        [ text "基調講演：Andrey Kuzmin（"
+                                        , a [ href "https://twitter.com/unsoundscapes", target "_blank" ] [ text "@unsoundscapes" ]
+                                        , text "）"
+                                        ]
                                     , li [] [ text "ライトニングトーク（事前募集）" ]
                                     ]
                                 ]

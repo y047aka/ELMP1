@@ -5822,7 +5822,19 @@ var $author$project$Main$view = function (_v0) {
 																		_List_Nil,
 																		_List_fromArray(
 																			[
-																				$elm$html$Html$text('基調講演：Andrey Kuzmin (@w0rm)')
+																				$elm$html$Html$text('基調講演：Andrey Kuzmin（'),
+																				A2(
+																				$elm$html$Html$a,
+																				_List_fromArray(
+																					[
+																						$elm$html$Html$Attributes$href('https://twitter.com/unsoundscapes'),
+																						$elm$html$Html$Attributes$target('_blank')
+																					]),
+																				_List_fromArray(
+																					[
+																						$elm$html$Html$text('@unsoundscapes')
+																					])),
+																				$elm$html$Html$text('）')
 																			])),
 																		A2(
 																		$elm$html$Html$li,
