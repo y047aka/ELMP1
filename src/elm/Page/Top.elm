@@ -11,7 +11,7 @@ view =
         [ hero
         , introduction
         , elmPackages
-        , informationTable
+        , plan
         ]
     , siteFooter
     ]
@@ -23,8 +23,8 @@ siteHeader =
         [ h1 [ class "navbar-brand" ]
             [ a [ class "navbar-item", href "/" ] [ text "ELMP1" ] ]
         , nav [ class "navbar-menu navbar-end" ]
-            [ a [ class "navbar-item", href "#concept" ] [ text "コンセプト" ]
-            , a [ class "navbar-item", href "#themes" ] [ text "トークテーマ" ]
+            [ a [ class "navbar-item", href "#prototyping" ] [ text "Prototyping" ]
+            , a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
             , a [ class "navbar-item", href "#entry" ] [ text "参加する" ]
             ]
         ]
@@ -43,9 +43,9 @@ hero =
 
 introduction : Html msg
 introduction =
-    section [ id "concept", class "section" ]
+    section [ id "prototyping", class "section" ]
         [ div [ class "container" ]
-            [ h1 [ class "title" ] [ text "Elm Prototyping : Class 1" ]
+            [ h1 [ class "title" ] [ text "Prototyping" ]
             , div [ class "content" ]
                 [ p []
                     [ text "通常のイベントでは、より多くの人が理解できるテーマの設定が重要です。"
@@ -69,7 +69,7 @@ elmPackages : Html msg
 elmPackages =
     section [ id "themes", class "section" ]
         [ div [ class "container" ]
-            [ h1 [ class "title" ] [ text "パッケージの最新情報を" ]
+            [ h1 [ class "title" ] [ text "Packages" ]
             , p [ class "content" ]
                 [ text "Elm においても、様々なパッケージの開発がおこなわれています。"
                 , br [] []
@@ -137,10 +137,11 @@ elmPackages =
         ]
 
 
-informationTable =
+plan : Html msg
+plan =
     section [ id "entry", class "section" ]
         [ div [ class "container" ]
-            [ h1 [ class "title" ] [ text "詳細情報" ]
+            [ h1 [ class "title" ] [ text "Plan" ]
             , p [ class "content" ]
                 [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "Connpass" ]
                 , text " から参加登録をしてください。"

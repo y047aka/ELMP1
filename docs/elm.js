@@ -5168,7 +5168,7 @@ var $author$project$Page$Top$elmPackages = A2(
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('パッケージの最新情報を')
+							$elm$html$Html$text('Packages')
 						])),
 					A2(
 					$elm$html$Html$p,
@@ -5577,11 +5577,83 @@ var $author$project$Page$Top$hero = A2(
 						]))
 				]))
 		]));
+var $author$project$Page$Top$introduction = A2(
+	$elm$html$Html$section,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$id('prototyping'),
+			$elm$html$Html$Attributes$class('section')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('container')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$h1,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('title')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Prototyping')
+						])),
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('content')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('通常のイベントでは、より多くの人が理解できるテーマの設定が重要です。'),
+									$elm$html$Html$text('この制約を外した時に何が起こるのでしょうか。'),
+									$elm$html$Html$text('Elm のより尖ったイベントを実施したいと思い、プロトタイピングのためのイベントを企画しました。')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('今回の ELMP1 では、ときに荒削りなプロトタイピングの情報をターゲットにします。')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('もしかしたら、敷居の高いイベントになってしまうかもしれません。'),
+									$elm$html$Html$text('トップクラスの Elm 開発者の話を、聴衆が一丸となって解き明かしていくようなイベントになれば面白いと考えています。'),
+									$elm$html$Html$text('ある意味では、上級者の「わかる」よりも、初級者の「わからない」が重要なイベントになるでしょう。'),
+									$elm$html$Html$text('時間が足りなかった場合や、反響が大きかった内容については、後日ハンズオンを企画するなどしてサポートしていきます。')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('実験的な要素が大きいイベントですが、ぜひ参加してみてください。')
+								]))
+						]))
+				]))
+		]));
+var $elm$html$Html$main_ = _VirtualDom_node('main');
 var $elm$html$Html$table = _VirtualDom_node('table');
 var $elm$html$Html$td = _VirtualDom_node('td');
 var $elm$html$Html$th = _VirtualDom_node('th');
 var $elm$html$Html$tr = _VirtualDom_node('tr');
-var $author$project$Page$Top$informationTable = A2(
+var $author$project$Page$Top$plan = A2(
 	$elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -5606,7 +5678,7 @@ var $author$project$Page$Top$informationTable = A2(
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('詳細情報')
+							$elm$html$Html$text('Plan')
 						])),
 					A2(
 					$elm$html$Html$p,
@@ -5763,78 +5835,6 @@ var $author$project$Page$Top$informationTable = A2(
 						]))
 				]))
 		]));
-var $author$project$Page$Top$introduction = A2(
-	$elm$html$Html$section,
-	_List_fromArray(
-		[
-			$elm$html$Html$Attributes$id('concept'),
-			$elm$html$Html$Attributes$class('section')
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('container')
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$h1,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('title')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Elm Prototyping : Class 1')
-						])),
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('content')
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$p,
-							_List_Nil,
-							_List_fromArray(
-								[
-									$elm$html$Html$text('通常のイベントでは、より多くの人が理解できるテーマの設定が重要です。'),
-									$elm$html$Html$text('この制約を外した時に何が起こるのでしょうか。'),
-									$elm$html$Html$text('Elm のより尖ったイベントを実施したいと思い、プロトタイピングのためのイベントを企画しました。')
-								])),
-							A2(
-							$elm$html$Html$p,
-							_List_Nil,
-							_List_fromArray(
-								[
-									$elm$html$Html$text('今回の ELMP1 では、ときに荒削りなプロトタイピングの情報をターゲットにします。')
-								])),
-							A2(
-							$elm$html$Html$p,
-							_List_Nil,
-							_List_fromArray(
-								[
-									$elm$html$Html$text('もしかしたら、敷居の高いイベントになってしまうかもしれません。'),
-									$elm$html$Html$text('トップクラスの Elm 開発者の話を、聴衆が一丸となって解き明かしていくようなイベントになれば面白いと考えています。'),
-									$elm$html$Html$text('ある意味では、上級者の「わかる」よりも、初級者の「わからない」が重要なイベントになるでしょう。'),
-									$elm$html$Html$text('時間が足りなかった場合や、反響が大きかった内容については、後日ハンズオンを企画するなどしてサポートしていきます。')
-								])),
-							A2(
-							$elm$html$Html$p,
-							_List_Nil,
-							_List_fromArray(
-								[
-									$elm$html$Html$text('実験的な要素が大きいイベントですが、ぜひ参加してみてください。')
-								]))
-						]))
-				]))
-		]));
-var $elm$html$Html$main_ = _VirtualDom_node('main');
 var $elm$html$Html$footer = _VirtualDom_node('footer');
 var $author$project$Page$Top$siteFooter = A2(
 	$elm$html$Html$footer,
@@ -5898,22 +5898,22 @@ var $author$project$Page$Top$siteHeader = A2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item'),
-							$elm$html$Html$Attributes$href('#concept')
+							$elm$html$Html$Attributes$href('#prototyping')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('コンセプト')
+							$elm$html$Html$text('Prototyping')
 						])),
 					A2(
 					$elm$html$Html$a,
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item'),
-							$elm$html$Html$Attributes$href('#themes')
+							$elm$html$Html$Attributes$href('#packages')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('トークテーマ')
+							$elm$html$Html$text('Packages')
 						])),
 					A2(
 					$elm$html$Html$a,
@@ -5935,7 +5935,7 @@ var $author$project$Page$Top$view = _List_fromArray(
 		$elm$html$Html$main_,
 		_List_Nil,
 		_List_fromArray(
-			[$author$project$Page$Top$hero, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$informationTable])),
+			[$author$project$Page$Top$hero, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan])),
 		$author$project$Page$Top$siteFooter
 	]);
 var $author$project$Main$view = function (_v0) {
