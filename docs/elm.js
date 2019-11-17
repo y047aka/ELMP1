@@ -5835,6 +5835,190 @@ var $author$project$Page$Top$plan = A2(
 						]))
 				]))
 		]));
+var $author$project$Page$Top$process = A2(
+	$elm$html$Html$section,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$id('process'),
+			$elm$html$Html$Attributes$class('section')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('container')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$h1,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('title')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Process')
+						])),
+					A2(
+					$elm$html$Html$p,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('content')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('それぞれの発表は以下のような手順で進行します。')
+						])),
+					A2(
+					$elm$html$Html$ul,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('columns')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$li,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('column')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('notification')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('media')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$div,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('media-left is-size-3 has-text-weight-semibold')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text('1')
+														])),
+													A2(
+													$elm$html$Html$div,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('media-content content')
+														]),
+													_List_fromArray(
+														[
+															A2(
+															$elm$html$Html$h1,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$class('title is-6')
+																]),
+															_List_fromArray(
+																[
+																	$elm$html$Html$text('プレゼンテーション（10 min）')
+																])),
+															$elm$html$Html$text('ここだけであればいつもの LT ですが')
+														]))
+												]))
+										]))
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('column')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('notification')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('media')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$div,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('media-left is-size-3 has-text-weight-semibold')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text('2')
+														])),
+													A2(
+													$elm$html$Html$div,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('media-content content')
+														]),
+													_List_fromArray(
+														[
+															A2(
+															$elm$html$Html$h1,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$class('title is-6')
+																]),
+															_List_fromArray(
+																[
+																	$elm$html$Html$text('質疑応答 / コードリーディング（20 min）')
+																])),
+															$elm$html$Html$text('アイデアが形になるまでを徹底的に追っていきます。')
+														]))
+												]))
+										]))
+								]))
+						])),
+					A2(
+					$elm$html$Html$p,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('content')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('これを繰り返すことでイベントが進んでいきます。')
+						])),
+					A2(
+					$elm$html$Html$p,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('content')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('発表を聞いて印象に残ったことを積極的に質問してください。'),
+							A2($elm$html$Html$br, _List_Nil, _List_Nil),
+							$elm$html$Html$text('反響の大きかった内容については、後日ハンズオンイベントなどでも取り上げていきます。')
+						]))
+				]))
+		]));
 var $elm$html$Html$footer = _VirtualDom_node('footer');
 var $author$project$Page$Top$siteFooter = A2(
 	$elm$html$Html$footer,
@@ -5935,7 +6119,7 @@ var $author$project$Page$Top$view = _List_fromArray(
 		$elm$html$Html$main_,
 		_List_Nil,
 		_List_fromArray(
-			[$author$project$Page$Top$hero, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan])),
+			[$author$project$Page$Top$hero, $author$project$Page$Top$process, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan])),
 		$author$project$Page$Top$siteFooter
 	]);
 var $author$project$Main$view = function (_v0) {

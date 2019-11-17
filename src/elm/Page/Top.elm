@@ -1,6 +1,6 @@
 module Page.Top exposing (view)
 
-import Html exposing (Html, a, br, div, footer, h1, h2, header, li, main_, nav, p, section, table, td, text, th, tr, ul)
+import Html exposing (Html, a, br, div, footer, h1, h2, h3, h4, header, li, main_, nav, p, section, table, td, text, th, tr, ul)
 import Html.Attributes exposing (class, href, id, target)
 
 
@@ -9,6 +9,7 @@ view =
     [ siteHeader
     , main_ []
         [ hero
+        , process
         , introduction
         , elmPackages
         , plan
@@ -37,6 +38,47 @@ hero =
             [ h1 [ class "title" ] [ text "ELMP1" ]
             , h2 [ class "subtitle" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
             , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
+            ]
+        ]
+
+
+process : Html msg
+process =
+    section [ id "process", class "section" ]
+        [ div [ class "container" ]
+            [ h1 [ class "title" ] [ text "Process" ]
+            , p [ class "content" ] [ text "それぞれの発表は以下のような手順で進行します。" ]
+            , ul [ class "columns" ]
+                [ li [ class "column" ]
+                    [ div [ class "notification" ]
+                        [ div [ class "media" ]
+                            [ div [ class "media-left is-size-3 has-text-weight-semibold" ] [ text "1" ]
+                            , div [ class "media-content content" ]
+                                [ h1 [ class "title is-6" ] [ text "プレゼンテーション（10 min）" ]
+                                , text "ここだけであればいつもの LT ですが"
+                                ]
+                            ]
+                        ]
+                    ]
+                , li [ class "column" ]
+                    [ div [ class "notification" ]
+                        [ div [ class "media" ]
+                            [ div [ class "media-left is-size-3 has-text-weight-semibold" ] [ text "2" ]
+                            , div [ class "media-content content" ]
+                                [ h1 [ class "title is-6" ] [ text "質疑応答 / コードリーディング（20 min）" ]
+                                , text "アイデアが形になるまでを徹底的に追っていきます。"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            , p [ class "content" ]
+                [ text "これを繰り返すことでイベントが進んでいきます。" ]
+            , p [ class "content" ]
+                [ text "発表を聞いて印象に残ったことを積極的に質問してください。"
+                , br [] []
+                , text "反響の大きかった内容については、後日ハンズオンイベントなどでも取り上げていきます。"
+                ]
             ]
         ]
 
