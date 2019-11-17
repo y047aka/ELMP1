@@ -84,7 +84,7 @@ process =
                 ]
             , div [ class "message is-dark" ]
                 [ h1 [ class "message-header" ] [ text "発表者の方へ" ]
-                , p [ class "message-body" ] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
+                , p [ class "message-body has-background-light" ] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
                 ]
             ]
         ]
@@ -125,7 +125,7 @@ elmPackages =
                     , target "_blank"
                     ]
                     [ div [ class "message is-dark" ]
-                        [ div [ class "message-body media" ]
+                        [ div [ class "message-body media has-background-light" ]
                             [ div [ class "media-content" ]
                                 [ h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text (developer ++ " /") ]
                                 , h1 [ class "title is-4" ] [ text packageName ]

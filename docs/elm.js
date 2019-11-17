@@ -5203,7 +5203,7 @@ var $author$project$Page$Top$elmPackages = function () {
 									$elm$html$Html$div,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('message-body media')
+											$elm$html$Html$Attributes$class('message-body media has-background-light')
 										]),
 									_List_fromArray(
 										[
@@ -5849,7 +5849,7 @@ var $author$project$Page$Top$process = A2(
 							$elm$html$Html$p,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('message-body')
+									$elm$html$Html$Attributes$class('message-body has-background-light')
 								]),
 							_List_fromArray(
 								[
