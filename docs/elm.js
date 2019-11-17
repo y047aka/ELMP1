@@ -5195,7 +5195,7 @@ var $author$project$Page$Top$elmPackages = function () {
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('notification media is-light')
+									$elm$html$Html$Attributes$class('message is-dark')
 								]),
 							_List_fromArray(
 								[
@@ -5203,56 +5203,65 @@ var $author$project$Page$Top$elmPackages = function () {
 									$elm$html$Html$div,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('media-content')
+											$elm$html$Html$Attributes$class('message-body media')
 										]),
 									_List_fromArray(
 										[
 											A2(
-											$elm$html$Html$h2,
+											$elm$html$Html$div,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
+													$elm$html$Html$Attributes$class('media-content')
 												]),
 											_List_fromArray(
 												[
-													$elm$html$Html$text(developer + ' /')
+													A2(
+													$elm$html$Html$h2,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text(developer + ' /')
+														])),
+													A2(
+													$elm$html$Html$h1,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('title is-4')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text(packageName)
+														])),
+													A2(
+													$elm$html$Html$p,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('is-size-7')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text(category)
+														]))
 												])),
 											A2(
-											$elm$html$Html$h1,
+											$elm$html$Html$div,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('title is-4')
+													$elm$html$Html$Attributes$class('media-right icon')
 												]),
 											_List_fromArray(
 												[
-													$elm$html$Html$text(packageName)
-												])),
-											A2(
-											$elm$html$Html$p,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('is-size-7')
-												]),
-											_List_fromArray(
-												[
-													$elm$html$Html$text(category)
+													A2(
+													$elm$html$Html$i,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('fas fa-lg fa-angle-double-right')
+														]),
+													_List_Nil)
 												]))
-										])),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('media-right icon is-medium')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$i,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('fas fa-lg fa-angle-double-right')
-												]),
-											_List_Nil)
 										]))
 								]))
 						]))
@@ -5822,7 +5831,7 @@ var $author$project$Page$Top$process = A2(
 					$elm$html$Html$div,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('message')
+							$elm$html$Html$Attributes$class('message is-dark')
 						]),
 					_List_fromArray(
 						[
