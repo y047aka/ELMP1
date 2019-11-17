@@ -1,6 +1,6 @@
 module Page.Top exposing (view)
 
-import Html exposing (Html, a, br, button, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, td, text, th, tr, ul)
+import Html exposing (Html, a, br, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, td, text, th, tr, ul)
 import Html.Attributes exposing (class, href, id, target)
 import Url.Builder exposing (crossOrigin)
 
@@ -73,12 +73,18 @@ process =
                         ]
                     ]
                 ]
-            , p [ class "content" ]
-                [ text "これを繰り返すことでイベントが進んでいきます。" ]
-            , p [ class "content" ]
-                [ text "発表を聞いて印象に残ったことを積極的に質問してください。"
-                , br [] []
-                , text "反響の大きかった内容については、後日ハンズオンイベントなどでも取り上げていきます。"
+            , div [ class "content" ]
+                [ p []
+                    [ text "これを繰り返すことでイベントが進んでいきます。" ]
+                , p []
+                    [ text "発表を聞いて印象に残ったことを積極的に質問してください。"
+                    , br [] []
+                    , text "反響の大きかった内容については、後日ハンズオンイベントなどでも取り上げていきます。"
+                    ]
+                ]
+            , div [ class "message" ]
+                [ h1 [ class "message-header" ] [ text "発表者の方へ" ]
+                , p [ class "message-body" ] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
                 ]
             ]
         ]

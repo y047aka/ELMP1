@@ -5794,26 +5794,58 @@ var $author$project$Page$Top$process = A2(
 								]))
 						])),
 					A2(
-					$elm$html$Html$p,
+					$elm$html$Html$div,
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('content')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('これを繰り返すことでイベントが進んでいきます。')
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('これを繰り返すことでイベントが進んでいきます。')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('発表を聞いて印象に残ったことを積極的に質問してください。'),
+									A2($elm$html$Html$br, _List_Nil, _List_Nil),
+									$elm$html$Html$text('反響の大きかった内容については、後日ハンズオンイベントなどでも取り上げていきます。')
+								]))
 						])),
 					A2(
-					$elm$html$Html$p,
+					$elm$html$Html$div,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('content')
+							$elm$html$Html$Attributes$class('message')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('発表を聞いて印象に残ったことを積極的に質問してください。'),
-							A2($elm$html$Html$br, _List_Nil, _List_Nil),
-							$elm$html$Html$text('反響の大きかった内容については、後日ハンズオンイベントなどでも取り上げていきます。')
+							A2(
+							$elm$html$Html$h1,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('message-header')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('発表者の方へ')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('message-body')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('企画の性質上、ソースコードの公開にご協力ください')
+								]))
 						]))
 				]))
 		]));
