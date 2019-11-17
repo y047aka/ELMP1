@@ -21,9 +21,9 @@ view =
 
 siteHeader : Html msg
 siteHeader =
-    header [ class "navbar is-dark" ]
+    header [ class "navbar is-spaced is-primary" ]
         [ h1 [ class "navbar-brand" ]
-            [ a [ class "navbar-item", href "/" ] [ text "ELMP1" ] ]
+            [ a [ class "navbar-item title is-4", href "/" ] [ text "ELM P1" ] ]
         , nav [ class "navbar-menu navbar-end" ]
             [ a [ class "navbar-item", href "#prototyping" ] [ text "Prototyping" ]
             , a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
@@ -36,7 +36,7 @@ hero : Html msg
 hero =
     section [ class "hero is-medium is-primary" ]
         [ div [ class "hero-body container" ]
-            [ h1 [ class "title is-1" ] [ text "ELMP1" ]
+            [ h1 [ class "title is-1" ] [ text "ELM P1" ]
             , h2 [ class "subtitle has-text-weight-bold" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
             , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
             ]

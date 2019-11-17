@@ -51,6 +51,6 @@ update msg model =
 
 view : Model -> Document Msg
 view _ =
-    { title = "Elm Prototyping : Class 1"
+    { title = "ELMP1"
     , body = Page.Top.view
     }

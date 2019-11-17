@@ -5354,7 +5354,7 @@ var $author$project$Page$Top$hero = A2(
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('ELMP1')
+							$elm$html$Html$text('ELM P1')
 						])),
 					A2(
 					$elm$html$Html$h2,
@@ -5875,7 +5875,7 @@ var $author$project$Page$Top$siteHeader = A2(
 	$elm$html$Html$header,
 	_List_fromArray(
 		[
-			$elm$html$Html$Attributes$class('navbar is-dark')
+			$elm$html$Html$Attributes$class('navbar is-spaced is-primary')
 		]),
 	_List_fromArray(
 		[
@@ -5891,12 +5891,12 @@ var $author$project$Page$Top$siteHeader = A2(
 					$elm$html$Html$a,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('navbar-item'),
+							$elm$html$Html$Attributes$class('navbar-item title is-4'),
 							$elm$html$Html$Attributes$href('/')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('ELMP1')
+							$elm$html$Html$text('ELM P1')
 						]))
 				])),
 			A2(
@@ -5953,7 +5953,7 @@ var $author$project$Page$Top$view = _List_fromArray(
 		$author$project$Page$Top$siteFooter
 	]);
 var $author$project$Main$view = function (_v0) {
-	return {body: $author$project$Page$Top$view, title: 'Elm Prototyping : Class 1'};
+	return {body: $author$project$Page$Top$view, title: 'ELMP1'};
 };
 var $author$project$Main$main = $elm$browser$Browser$document(
 	{
