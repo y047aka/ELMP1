@@ -1,6 +1,6 @@
 module Page.Top exposing (view)
 
-import Html exposing (Html, a, br, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, td, text, th, tr, ul)
+import Html exposing (Html, a, br, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, tbody, td, text, tfoot, th, thead, tr, ul)
 import Html.Attributes exposing (class, href, id, target)
 import Url.Builder exposing (crossOrigin)
 
@@ -14,6 +14,7 @@ view =
         , introduction
         , elmPackages
         , plan
+        , connpass
         ]
     , siteFooter
     ]
@@ -27,7 +28,8 @@ siteHeader =
         , nav [ class "navbar-menu navbar-end" ]
             [ a [ class "navbar-item", href "#prototyping" ] [ text "Prototyping" ]
             , a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
-            , a [ class "navbar-item", href "#entry" ] [ text "参加する" ]
+            , a [ class "navbar-item", href "#plan" ] [ text "Plan" ]
+            , a [ class "navbar-item", href "#connpass" ] [ text "参加登録" ]
             ]
         ]
 
@@ -138,7 +140,7 @@ elmPackages =
                     ]
                 ]
     in
-    section [ id "themes", class "section" ]
+    section [ id "packages", class "section" ]
         [ div [ class "container" ]
             [ h1 [ class "title" ] [ text "Packages" ]
             , p [ class "content" ]
@@ -186,54 +188,113 @@ elmPackages =
 
 plan : Html msg
 plan =
-    section [ id "entry", class "section" ]
+    section [ id "plan", class "section" ]
         [ div [ class "container" ]
-            [ h1 [ class "title" ] [ text "Plan" ]
-            , p [ class "content" ]
-                [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "Connpass" ]
-                , text " から参加登録をしてください。"
+            [ div [ class "content" ]
+                [ h1 [ class "title" ] [ text "Plan" ]
+                , h2 [ class "title is-5" ] [ text "会場" ]
+                , p []
+                    [ text "〒106-0032"
+                    , br [] []
+                    , text "東京都港区六本木3丁目2−1"
+                    , br [] []
+                    , text "住友不動産六本木グランドタワー 43階"
+                    , br [] []
+                    , text "Fringe81株式会社様 会議室"
+                    ]
+                , h2 [ class "title is-5" ] [ text "タイムテーブル" ]
+                ]
+            , div [ class "message is-dark" ]
+                [ h1 [ class "message-header" ] [ text "注意！" ]
+                , p [ class "message-body has-background-light" ] [ text "13:00 までに必ず入場してください" ]
                 ]
             , table [ class "table is-fullwidth" ]
-                [ tr []
-                    [ th [] [ text "日程" ]
-                    , td []
-                        [ text "2019年12月7日 13:00 開始"
-                        , br [] []
-                        , text "※ 途中入場不可"
+                [ thead []
+                    [ tr []
+                        [ th [] [ text "時刻" ]
+                        , th [] [ text "イベント" ]
                         ]
                     ]
-                , tr []
-                    [ th [] [ text "会場" ]
-                    , td []
-                        [ text "〒106-0032"
-                        , br [] []
-                        , text "東京都港区六本木3丁目2−1"
-                        , br [] []
-                        , text "住友不動産六本木グランドタワー 43階"
-                        , br [] []
-                        , text "Fringe81株式会社様 会議室"
+                , tbody []
+                    [ tr []
+                        [ td [] [ text "12:30-" ]
+                        , td [] [ text "開場" ]
+                        ]
+                    , tr []
+                        [ td [] []
+                        , td [] []
+                        ]
+                    , tr []
+                        [ td [] [ text "13:00-" ]
+                        , td [] [ text "Warm up" ]
+                        ]
+                    , tr []
+                        [ td [] []
+                        , td [] []
+                        ]
+                    , tr []
+                        [ td [] [ text "13:30-" ]
+                        , td [] [ text "Stint: 1" ]
+                        ]
+                    , tr []
+                        [ td [] [ text "14:00-" ]
+                        , td [] [ text "Stint: 2" ]
+                        ]
+                    , tr []
+                        [ td [] [ text "14:30-" ]
+                        , td [] [ text "Stint: 3" ]
+                        ]
+                    , tr []
+                        [ td [] []
+                        , td [] []
+                        ]
+                    , tr []
+                        [ td [] [ text "15:30-" ]
+                        , td [] [ text "Stint: 4" ]
+                        ]
+                    , tr []
+                        [ td [] [ text "16:00-" ]
+                        , td [] [ text "Stint: 5" ]
+                        ]
+                    , tr []
+                        [ td [] [ text "16:30-" ]
+                        , td [] [ text "Stint: 6" ]
+                        ]
+                    , tr []
+                        [ td [] []
+                        , td [] []
+                        ]
+                    , tr []
+                        [ td [] [ text "17:00-" ]
+                        , td [] [ text "懇親会" ]
                         ]
                     ]
-                , tr []
-                    [ th [] [ text "内容" ]
-                    , td [ class "content" ]
-                        [ ul []
-                            [ li []
-                                [ text "基調講演：Andrey Kuzmin（"
-                                , a [ href "https://twitter.com/unsoundscapes", target "_blank" ] [ text "@unsoundscapes" ]
-                                , text "）"
-                                ]
-                            , li [] [ text "ライトニングトーク（事前募集）" ]
-                            ]
+                , tfoot []
+                    [ tr []
+                        [ td [] [ text "18:00-" ]
+                        , td [] [ text "片付け" ]
                         ]
                     ]
                 ]
-            , p []
+            , p [ class "content" ]
                 [ text "詳細が決定し次第、更新します"
                 , br [] []
                 , text "更新の際には、戸塚のTwitter（"
                 , a [ href "https://twitter.com/y047aka", target "_blank" ] [ text "@y047aka" ]
                 , text "）から情報発信予定"
+                ]
+            ]
+        ]
+
+
+connpass : Html msg
+connpass =
+    section [ id "connpass", class "section" ]
+        [ div [ class "container" ]
+            [ h1 [ class "title" ] [ text "参加登録" ]
+            , p []
+                [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "connpass" ]
+                , text " から参加登録をしてください。"
                 ]
             ]
         ]

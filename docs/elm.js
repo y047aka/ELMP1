@@ -5116,7 +5116,6 @@ var $author$project$Main$update = F2(
 		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 	});
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -5126,6 +5125,68 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
+var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $elm$html$Html$p = _VirtualDom_node('p');
+var $elm$html$Html$section = _VirtualDom_node('section');
+var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Page$Top$connpass = A2(
+	$elm$html$Html$section,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$id('connpass'),
+			$elm$html$Html$Attributes$class('section')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('container')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$h1,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('title')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('参加登録')
+						])),
+					A2(
+					$elm$html$Html$p,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://elm-jp.connpass.com/event/156016/'),
+									$elm$html$Html$Attributes$target('_blank')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('connpass')
+								])),
+							$elm$html$Html$text(' から参加登録をしてください。')
+						]))
+				]))
+		]));
+var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$url$Url$Builder$toQueryPair = function (_v0) {
 	var key = _v0.a;
 	var value = _v0.b;
@@ -5145,23 +5206,9 @@ var $elm$url$Url$Builder$crossOrigin = F3(
 	function (prePath, pathSegments, parameters) {
 		return prePath + ('/' + (A2($elm$core$String$join, '/', pathSegments) + $elm$url$Url$Builder$toQuery(parameters)));
 	});
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
 var $elm$html$Html$i = _VirtualDom_node('i');
-var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
 var $elm$html$Html$li = _VirtualDom_node('li');
-var $elm$html$Html$p = _VirtualDom_node('p');
-var $elm$html$Html$section = _VirtualDom_node('section');
-var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$html$Html$ul = _VirtualDom_node('ul');
 var $author$project$Page$Top$elmPackages = function () {
 	var listItem = function (_v0) {
@@ -5271,7 +5318,7 @@ var $author$project$Page$Top$elmPackages = function () {
 		$elm$html$Html$section,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$id('themes'),
+				$elm$html$Html$Attributes$id('packages'),
 				$elm$html$Html$Attributes$class('section')
 			]),
 		_List_fromArray(
@@ -5457,14 +5504,17 @@ var $author$project$Page$Top$introduction = A2(
 		]));
 var $elm$html$Html$main_ = _VirtualDom_node('main');
 var $elm$html$Html$table = _VirtualDom_node('table');
+var $elm$html$Html$tbody = _VirtualDom_node('tbody');
 var $elm$html$Html$td = _VirtualDom_node('td');
+var $elm$html$Html$tfoot = _VirtualDom_node('tfoot');
 var $elm$html$Html$th = _VirtualDom_node('th');
+var $elm$html$Html$thead = _VirtualDom_node('thead');
 var $elm$html$Html$tr = _VirtualDom_node('tr');
 var $author$project$Page$Top$plan = A2(
 	$elm$html$Html$section,
 	_List_fromArray(
 		[
-			$elm$html$Html$Attributes$id('entry'),
+			$elm$html$Html$Attributes$id('plan'),
 			$elm$html$Html$Attributes$class('section')
 		]),
 	_List_fromArray(
@@ -5478,17 +5528,7 @@ var $author$project$Page$Top$plan = A2(
 			_List_fromArray(
 				[
 					A2(
-					$elm$html$Html$h1,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('title')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Plan')
-						])),
-					A2(
-					$elm$html$Html$p,
+					$elm$html$Html$div,
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('content')
@@ -5496,17 +5536,77 @@ var $author$project$Page$Top$plan = A2(
 					_List_fromArray(
 						[
 							A2(
-							$elm$html$Html$a,
+							$elm$html$Html$h1,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$href('https://elm-jp.connpass.com/event/156016/'),
-									$elm$html$Html$Attributes$target('_blank')
+									$elm$html$Html$Attributes$class('title')
 								]),
 							_List_fromArray(
 								[
-									$elm$html$Html$text('Connpass')
+									$elm$html$Html$text('Plan')
 								])),
-							$elm$html$Html$text(' から参加登録をしてください。')
+							A2(
+							$elm$html$Html$h2,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('title is-5')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('会場')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('〒106-0032'),
+									A2($elm$html$Html$br, _List_Nil, _List_Nil),
+									$elm$html$Html$text('東京都港区六本木3丁目2−1'),
+									A2($elm$html$Html$br, _List_Nil, _List_Nil),
+									$elm$html$Html$text('住友不動産六本木グランドタワー 43階'),
+									A2($elm$html$Html$br, _List_Nil, _List_Nil),
+									$elm$html$Html$text('Fringe81株式会社様 会議室')
+								])),
+							A2(
+							$elm$html$Html$h2,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('title is-5')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('タイムテーブル')
+								]))
+						])),
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('message is-dark')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$h1,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('message-header')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('注意！')
+								])),
+							A2(
+							$elm$html$Html$p,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('message-body has-background-light')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('13:00 までに必ず入場してください')
+								]))
 						])),
 					A2(
 					$elm$html$Html$table,
@@ -5517,111 +5617,282 @@ var $author$project$Page$Top$plan = A2(
 					_List_fromArray(
 						[
 							A2(
-							$elm$html$Html$tr,
+							$elm$html$Html$thead,
 							_List_Nil,
 							_List_fromArray(
 								[
 									A2(
-									$elm$html$Html$th,
+									$elm$html$Html$tr,
 									_List_Nil,
-									_List_fromArray(
-										[
-											$elm$html$Html$text('日程')
-										])),
-									A2(
-									$elm$html$Html$td,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$elm$html$Html$text('2019年12月7日 13:00 開始'),
-											A2($elm$html$Html$br, _List_Nil, _List_Nil),
-											$elm$html$Html$text('※ 途中入場不可')
-										]))
-								])),
-							A2(
-							$elm$html$Html$tr,
-							_List_Nil,
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$th,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$elm$html$Html$text('会場')
-										])),
-									A2(
-									$elm$html$Html$td,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$elm$html$Html$text('〒106-0032'),
-											A2($elm$html$Html$br, _List_Nil, _List_Nil),
-											$elm$html$Html$text('東京都港区六本木3丁目2−1'),
-											A2($elm$html$Html$br, _List_Nil, _List_Nil),
-											$elm$html$Html$text('住友不動産六本木グランドタワー 43階'),
-											A2($elm$html$Html$br, _List_Nil, _List_Nil),
-											$elm$html$Html$text('Fringe81株式会社様 会議室')
-										]))
-								])),
-							A2(
-							$elm$html$Html$tr,
-							_List_Nil,
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$th,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$elm$html$Html$text('内容')
-										])),
-									A2(
-									$elm$html$Html$td,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('content')
-										]),
 									_List_fromArray(
 										[
 											A2(
-											$elm$html$Html$ul,
+											$elm$html$Html$th,
 											_List_Nil,
 											_List_fromArray(
 												[
-													A2(
-													$elm$html$Html$li,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('基調講演：Andrey Kuzmin（'),
-															A2(
-															$elm$html$Html$a,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$href('https://twitter.com/unsoundscapes'),
-																	$elm$html$Html$Attributes$target('_blank')
-																]),
-															_List_fromArray(
-																[
-																	$elm$html$Html$text('@unsoundscapes')
-																])),
-															$elm$html$Html$text('）')
-														])),
-													A2(
-													$elm$html$Html$li,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('ライトニングトーク（事前募集）')
-														]))
+													$elm$html$Html$text('時刻')
+												])),
+											A2(
+											$elm$html$Html$th,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('イベント')
+												]))
+										]))
+								])),
+							A2(
+							$elm$html$Html$tbody,
+							_List_Nil,
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('12:30-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('開場')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2($elm$html$Html$td, _List_Nil, _List_Nil),
+											A2($elm$html$Html$td, _List_Nil, _List_Nil)
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('13:00-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Warm up')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2($elm$html$Html$td, _List_Nil, _List_Nil),
+											A2($elm$html$Html$td, _List_Nil, _List_Nil)
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('13:30-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Stint: 1')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('14:00-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Stint: 2')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('14:30-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Stint: 3')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2($elm$html$Html$td, _List_Nil, _List_Nil),
+											A2($elm$html$Html$td, _List_Nil, _List_Nil)
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('15:30-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Stint: 4')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('16:00-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Stint: 5')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('16:30-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('Stint: 6')
+												]))
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2($elm$html$Html$td, _List_Nil, _List_Nil),
+											A2($elm$html$Html$td, _List_Nil, _List_Nil)
+										])),
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('17:00-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('懇親会')
+												]))
+										]))
+								])),
+							A2(
+							$elm$html$Html$tfoot,
+							_List_Nil,
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$tr,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('18:00-')
+												])),
+											A2(
+											$elm$html$Html$td,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('片付け')
 												]))
 										]))
 								]))
 						])),
 					A2(
 					$elm$html$Html$p,
-					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('content')
+						]),
 					_List_fromArray(
 						[
 							$elm$html$Html$text('詳細が決定し次第、更新します'),
@@ -5943,11 +6214,22 @@ var $author$project$Page$Top$siteHeader = A2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item'),
-							$elm$html$Html$Attributes$href('#entry')
+							$elm$html$Html$Attributes$href('#plan')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('参加する')
+							$elm$html$Html$text('Plan')
+						])),
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('navbar-item'),
+							$elm$html$Html$Attributes$href('#connpass')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('参加登録')
 						]))
 				]))
 		]));
@@ -5958,7 +6240,7 @@ var $author$project$Page$Top$view = _List_fromArray(
 		$elm$html$Html$main_,
 		_List_Nil,
 		_List_fromArray(
-			[$author$project$Page$Top$hero, $author$project$Page$Top$process, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan])),
+			[$author$project$Page$Top$hero, $author$project$Page$Top$process, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan, $author$project$Page$Top$connpass])),
 		$author$project$Page$Top$siteFooter
 	]);
 var $author$project$Main$view = function (_v0) {
