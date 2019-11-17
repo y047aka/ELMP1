@@ -5126,6 +5126,25 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$url$Url$Builder$toQueryPair = function (_v0) {
+	var key = _v0.a;
+	var value = _v0.b;
+	return key + ('=' + value);
+};
+var $elm$url$Url$Builder$toQuery = function (parameters) {
+	if (!parameters.b) {
+		return '';
+	} else {
+		return '?' + A2(
+			$elm$core$String$join,
+			'&',
+			A2($elm$core$List$map, $elm$url$Url$Builder$toQueryPair, parameters));
+	}
+};
+var $elm$url$Url$Builder$crossOrigin = F3(
+	function (prePath, pathSegments, parameters) {
+		return prePath + ('/' + (A2($elm$core$String$join, '/', pathSegments) + $elm$url$Url$Builder$toQuery(parameters)));
+	});
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
@@ -5135,6 +5154,7 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
+var $elm$html$Html$i = _VirtualDom_node('i');
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
 var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$p = _VirtualDom_node('p');
@@ -5143,395 +5163,173 @@ var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty(
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $author$project$Page$Top$elmPackages = A2(
-	$elm$html$Html$section,
-	_List_fromArray(
-		[
-			$elm$html$Html$Attributes$id('themes'),
-			$elm$html$Html$Attributes$class('section')
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$elm$html$Html$div,
+var $author$project$Page$Top$elmPackages = function () {
+	var listItem = function (_v0) {
+		var developer = _v0.developer;
+		var packageName = _v0.packageName;
+		var category = _v0.category;
+		return A2(
+			$elm$html$Html$li,
 			_List_fromArray(
 				[
-					$elm$html$Html$Attributes$class('container')
+					$elm$html$Html$Attributes$class('column')
 				]),
 			_List_fromArray(
 				[
 					A2(
-					$elm$html$Html$h1,
+					$elm$html$Html$a,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('title')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Packages')
-						])),
-					A2(
-					$elm$html$Html$p,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('content')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Elm においても、様々なパッケージの開発がおこなわれています。'),
-							A2($elm$html$Html$br, _List_Nil, _List_Nil),
-							$elm$html$Html$text('これらのパッケージの最新情報も得られる場にしたいと考えています。')
-						])),
-					A2(
-					$elm$html$Html$ul,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('columns')
+							$elm$html$Html$Attributes$href(
+							A3(
+								$elm$url$Url$Builder$crossOrigin,
+								'https://package.elm-lang.org/packages',
+								_List_fromArray(
+									[developer, packageName, 'latest']),
+								_List_Nil)),
+							$elm$html$Html$Attributes$target('_blank')
 						]),
 					_List_fromArray(
 						[
 							A2(
-							$elm$html$Html$li,
+							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('column')
+									$elm$html$Html$Attributes$class('notification media is-light')
 								]),
 							_List_fromArray(
 								[
 									A2(
-									$elm$html$Html$a,
+									$elm$html$Html$div,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/elm-community/typed-svg/latest/'),
-											$elm$html$Html$Attributes$target('_blank')
+											$elm$html$Html$Attributes$class('media-content')
 										]),
 									_List_fromArray(
 										[
 											A2(
-											$elm$html$Html$div,
+											$elm$html$Html$h2,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('notification')
+													$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
 												]),
 											_List_fromArray(
 												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('elm-community')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('typed-svg')
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('SVG')
-														]))
+													$elm$html$Html$text(developer + ' /')
+												])),
+											A2(
+											$elm$html$Html$h1,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('title is-4')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text(packageName)
+												])),
+											A2(
+											$elm$html$Html$p,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('is-size-7')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text(category)
 												]))
-										]))
-								])),
-							A2(
-							$elm$html$Html$li,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('column')
-								]),
-							_List_fromArray(
-								[
+										])),
 									A2(
-									$elm$html$Html$a,
+									$elm$html$Html$div,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/elm-explorations/webgl/latest/'),
-											$elm$html$Html$Attributes$target('_blank')
+											$elm$html$Html$Attributes$class('media-right icon is-medium')
 										]),
 									_List_fromArray(
 										[
 											A2(
-											$elm$html$Html$div,
+											$elm$html$Html$i,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('notification')
+													$elm$html$Html$Attributes$class('fas fa-lg fa-angle-double-right')
 												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('elm-explorations')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('webgl')
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('3DCG')
-														]))
-												]))
-										]))
-								])),
-							A2(
-							$elm$html$Html$li,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('column')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$a,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/gampleman/elm-visualization/latest/'),
-											$elm$html$Html$Attributes$target('_blank')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('notification')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('gampleman')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('elm-visualization')
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('データ・ビジュアライゼーション')
-														]))
-												]))
-										]))
-								]))
-						])),
-					A2(
-					$elm$html$Html$ul,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('columns')
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$li,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('column')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$a,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/gampleman/elm-mapbox/4.1.0/'),
-											$elm$html$Html$Attributes$target('_blank')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('notification')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('gampleman')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('elm-mapbox')
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('地図')
-														]))
-												]))
-										]))
-								])),
-							A2(
-							$elm$html$Html$li,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('column')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$a,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/w0rm/elm-physics/latest'),
-											$elm$html$Html$Attributes$target('_blank')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('notification')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('w0rm')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('elm-physics')
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('物理シミュレーション')
-														]))
-												]))
-										]))
-								])),
-							A2(
-							$elm$html$Html$li,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('column')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$a,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$href('https://package.elm-lang.org/packages/w0rm/elm-slice-show/latest'),
-											$elm$html$Html$Attributes$target('_blank')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('notification')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('w0rm')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text('elm-slice-show')
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_Nil,
-													_List_fromArray(
-														[
-															$elm$html$Html$text('プレゼンテーション・ツール')
-														]))
-												]))
+											_List_Nil)
 										]))
 								]))
 						]))
-				]))
-		]));
+				]));
+	};
+	return A2(
+		$elm$html$Html$section,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$id('themes'),
+				$elm$html$Html$Attributes$class('section')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('container')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h1,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('title')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Packages')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('content')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Elm においても、様々なパッケージの開発がおこなわれています。'),
+								A2($elm$html$Html$br, _List_Nil, _List_Nil),
+								$elm$html$Html$text('これらのパッケージの最新情報も得られる場にしたいと考えています。')
+							])),
+						A2(
+						$elm$html$Html$ul,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('columns')
+							]),
+						_List_fromArray(
+							[
+								listItem(
+								{category: 'SVG', developer: 'elm-community', packageName: 'typed-svg'}),
+								listItem(
+								{category: '3DCG', developer: 'elm-explorations', packageName: 'webgl'}),
+								listItem(
+								{category: 'データ・ビジュアライゼーション', developer: 'gampleman', packageName: 'elm-visualization'})
+							])),
+						A2(
+						$elm$html$Html$ul,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('columns')
+							]),
+						_List_fromArray(
+							[
+								listItem(
+								{category: '地図', developer: 'gampleman', packageName: 'elm-mapbox'}),
+								listItem(
+								{category: '物理シミュレーション', developer: 'w0rm', packageName: 'elm-physics'}),
+								listItem(
+								{category: 'プレゼンテーション・ツール', developer: 'w0rm', packageName: 'elm-slice-show'})
+							]))
+					]))
+			]));
+}();
 var $author$project$Page$Top$hero = A2(
 	$elm$html$Html$section,
 	_List_fromArray(
@@ -5552,7 +5350,7 @@ var $author$project$Page$Top$hero = A2(
 					$elm$html$Html$h1,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('title')
+							$elm$html$Html$Attributes$class('title is-1')
 						]),
 					_List_fromArray(
 						[
@@ -5562,7 +5360,7 @@ var $author$project$Page$Top$hero = A2(
 					$elm$html$Html$h2,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('subtitle')
+							$elm$html$Html$Attributes$class('subtitle has-text-weight-bold')
 						]),
 					_List_fromArray(
 						[
@@ -5705,7 +5503,7 @@ var $author$project$Page$Top$plan = A2(
 					$elm$html$Html$table,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('table')
+							$elm$html$Html$Attributes$class('table is-fullwidth')
 						]),
 					_List_fromArray(
 						[
@@ -5932,7 +5730,7 @@ var $author$project$Page$Top$process = A2(
 																[
 																	$elm$html$Html$text('プレゼンテーション（10 min）')
 																])),
-															$elm$html$Html$text('ここだけであればいつもの LT ですが')
+															$elm$html$Html$text('ここだけであれば、いつもの LT ですが…')
 														]))
 												]))
 										]))
@@ -5989,7 +5787,7 @@ var $author$project$Page$Top$process = A2(
 																[
 																	$elm$html$Html$text('質疑応答 / コードリーディング（20 min）')
 																])),
-															$elm$html$Html$text('アイデアが形になるまでを徹底的に追っていきます。')
+															$elm$html$Html$text('アイデアが形になるまでを徹底的に追っていきます')
 														]))
 												]))
 										]))
@@ -6024,7 +5822,7 @@ var $author$project$Page$Top$siteFooter = A2(
 	$elm$html$Html$footer,
 	_List_fromArray(
 		[
-			$elm$html$Html$Attributes$class('footer')
+			$elm$html$Html$Attributes$class('footer has-background-dark has-text-white')
 		]),
 	_List_fromArray(
 		[

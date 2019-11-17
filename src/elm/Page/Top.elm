@@ -1,7 +1,8 @@
 module Page.Top exposing (view)
 
-import Html exposing (Html, a, br, div, footer, h1, h2, h3, h4, header, li, main_, nav, p, section, table, td, text, th, tr, ul)
+import Html exposing (Html, a, br, button, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, td, text, th, tr, ul)
 import Html.Attributes exposing (class, href, id, target)
+import Url.Builder exposing (crossOrigin)
 
 
 view : List (Html msg)
@@ -35,8 +36,8 @@ hero : Html msg
 hero =
     section [ class "hero is-medium is-primary" ]
         [ div [ class "hero-body container" ]
-            [ h1 [ class "title" ] [ text "ELMP1" ]
-            , h2 [ class "subtitle" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
+            [ h1 [ class "title is-1" ] [ text "ELMP1" ]
+            , h2 [ class "subtitle has-text-weight-bold" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
             , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
             ]
         ]
@@ -55,7 +56,7 @@ process =
                             [ div [ class "media-left is-size-3 has-text-weight-semibold" ] [ text "1" ]
                             , div [ class "media-content content" ]
                                 [ h1 [ class "title is-6" ] [ text "プレゼンテーション（10 min）" ]
-                                , text "ここだけであればいつもの LT ですが"
+                                , text "ここだけであれば、いつもの LT ですが…"
                                 ]
                             ]
                         ]
@@ -66,7 +67,7 @@ process =
                             [ div [ class "media-left is-size-3 has-text-weight-semibold" ] [ text "2" ]
                             , div [ class "media-content content" ]
                                 [ h1 [ class "title is-6" ] [ text "質疑応答 / コードリーディング（20 min）" ]
-                                , text "アイデアが形になるまでを徹底的に追っていきます。"
+                                , text "アイデアが形になるまでを徹底的に追っていきます"
                                 ]
                             ]
                         ]
@@ -109,6 +110,26 @@ introduction =
 
 elmPackages : Html msg
 elmPackages =
+    let
+        listItem { developer, packageName, category } =
+            li [ class "column" ]
+                [ a
+                    [ href <|
+                        crossOrigin "https://package.elm-lang.org/packages" [ developer, packageName, "latest" ] []
+                    , target "_blank"
+                    ]
+                    [ div [ class "notification media is-light" ]
+                        [ div [ class "media-content" ]
+                            [ h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text (developer ++ " /") ]
+                            , h1 [ class "title is-4" ] [ text packageName ]
+                            , p [ class "is-size-7" ] [ text category ]
+                            ]
+                        , div [ class "media-right icon is-medium" ]
+                            [ i [ class "fas fa-lg fa-angle-double-right" ] [] ]
+                        ]
+                    ]
+                ]
+    in
     section [ id "themes", class "section" ]
         [ div [ class "container" ]
             [ h1 [ class "title" ] [ text "Packages" ]
@@ -118,62 +139,38 @@ elmPackages =
                 , text "これらのパッケージの最新情報も得られる場にしたいと考えています。"
                 ]
             , ul [ class "columns" ]
-                [ li [ class "column" ]
-                    [ a [ href "https://package.elm-lang.org/packages/elm-community/typed-svg/latest/", target "_blank" ]
-                        [ div [ class "notification" ]
-                            [ h2 [ class "subtitle" ] [ text "elm-community" ]
-                            , h1 [ class "title" ] [ text "typed-svg" ]
-                            , p [] [ text "SVG" ]
-                            ]
-                        ]
-                    ]
-                , li [ class "column" ]
-                    [ a [ href "https://package.elm-lang.org/packages/elm-explorations/webgl/latest/", target "_blank" ]
-                        [ div [ class "notification" ]
-                            [ h2 [ class "subtitle" ] [ text "elm-explorations" ]
-                            , h1 [ class "title" ] [ text "webgl" ]
-                            , p [] [ text "3DCG" ]
-                            ]
-                        ]
-                    ]
-                , li [ class "column" ]
-                    [ a [ href "https://package.elm-lang.org/packages/gampleman/elm-visualization/latest/", target "_blank" ]
-                        [ div [ class "notification" ]
-                            [ h2 [ class "subtitle" ] [ text "gampleman" ]
-                            , h1 [ class "title" ] [ text "elm-visualization" ]
-                            , p [] [ text "データ・ビジュアライゼーション" ]
-                            ]
-                        ]
-                    ]
+                [ listItem
+                    { developer = "elm-community"
+                    , packageName = "typed-svg"
+                    , category = "SVG"
+                    }
+                , listItem
+                    { developer = "elm-explorations"
+                    , packageName = "webgl"
+                    , category = "3DCG"
+                    }
+                , listItem
+                    { developer = "gampleman"
+                    , packageName = "elm-visualization"
+                    , category = "データ・ビジュアライゼーション"
+                    }
                 ]
             , ul [ class "columns" ]
-                [ li [ class "column" ]
-                    [ a [ href "https://package.elm-lang.org/packages/gampleman/elm-mapbox/4.1.0/", target "_blank" ]
-                        [ div [ class "notification" ]
-                            [ h2 [ class "subtitle" ] [ text "gampleman" ]
-                            , h1 [ class "title" ] [ text "elm-mapbox" ]
-                            , p [] [ text "地図" ]
-                            ]
-                        ]
-                    ]
-                , li [ class "column" ]
-                    [ a [ href "https://package.elm-lang.org/packages/w0rm/elm-physics/latest", target "_blank" ]
-                        [ div [ class "notification" ]
-                            [ h2 [ class "subtitle" ] [ text "w0rm" ]
-                            , h1 [ class "title" ] [ text "elm-physics" ]
-                            , p [] [ text "物理シミュレーション" ]
-                            ]
-                        ]
-                    ]
-                , li [ class "column" ]
-                    [ a [ href "https://package.elm-lang.org/packages/w0rm/elm-slice-show/latest", target "_blank" ]
-                        [ div [ class "notification" ]
-                            [ h2 [ class "subtitle" ] [ text "w0rm" ]
-                            , h1 [ class "title" ] [ text "elm-slice-show" ]
-                            , p [] [ text "プレゼンテーション・ツール" ]
-                            ]
-                        ]
-                    ]
+                [ listItem
+                    { developer = "gampleman"
+                    , packageName = "elm-mapbox"
+                    , category = "地図"
+                    }
+                , listItem
+                    { developer = "w0rm"
+                    , packageName = "elm-physics"
+                    , category = "物理シミュレーション"
+                    }
+                , listItem
+                    { developer = "w0rm"
+                    , packageName = "elm-slice-show"
+                    , category = "プレゼンテーション・ツール"
+                    }
                 ]
             ]
         ]
@@ -188,7 +185,7 @@ plan =
                 [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "Connpass" ]
                 , text " から参加登録をしてください。"
                 ]
-            , table [ class "table" ]
+            , table [ class "table is-fullwidth" ]
                 [ tr []
                     [ th [] [ text "日程" ]
                     , td []
@@ -236,7 +233,7 @@ plan =
 
 siteFooter : Html msg
 siteFooter =
-    footer [ class "footer" ]
+    footer [ class "footer has-background-dark has-text-white" ]
         [ div [ class "container" ]
             [ text "© 2019 y047aka" ]
         ]

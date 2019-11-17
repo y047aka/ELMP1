@@ -1,40 +1,4 @@
 $primary: hsl(0, 100%, 40%);
 
-.section {
-  .title {
-  }
-}
-
-.columns {
-  .column {
-    a {
-      .notification {
-        @extend .is-light;
-
-        .title {
-          @extend .is-4;
-        }
-
-        .subtitle {
-          @extend .is-6;
-        }
-
-        p {
-        }
-      }
-    }
-  }
-}
-
-.table {
-  @extend .is-fullwidth;
-  @extend .is-striped;
-}
-
-.footer {
-  @extend .has-background-dark;
-  @extend .has-text-white;
-}
-
 // Import Bulma
 @import "../node_modules/bulma/bulma.sass";
