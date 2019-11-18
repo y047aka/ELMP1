@@ -68,8 +68,8 @@ process =
                         [ div [ class "media" ]
                             [ div [ class "media-left is-size-3 has-text-weight-semibold" ] [ text "2" ]
                             , div [ class "media-content content" ]
-                                [ h1 [ class "title is-6" ] [ text "質疑応答 / コードリーディング（20 min）" ]
-                                , text "アイデアが形になるまでを徹底的に追っていきます"
+                                [ h1 [ class "title is-6" ] [ text "トーク（20 min）" ]
+                                , text "アイデアが形になるまでを追っていきます"
                                 ]
                             ]
                         ]
@@ -86,7 +86,13 @@ process =
                 ]
             , div [ class "message is-dark" ]
                 [ h1 [ class "message-header" ] [ text "発表者の方へ" ]
-                , p [ class "message-body has-background-light" ] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
+                , div [ class "message-body content has-background-light" ]
+                    [ ul []
+                        [ li [] [ text "無線LAN、プロジェクタ、各種変換アダプタ の利用が可能です" ]
+                        , li [] [ text "発表に使用するスライドは SpeakerDeck などのサービスにアップロードしてください" ]
+                        , li [] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
+                        ]
+                    ]
                 ]
             ]
         ]
@@ -276,13 +282,6 @@ plan =
                         ]
                     ]
                 ]
-            , p [ class "content" ]
-                [ text "詳細が決定し次第、更新します"
-                , br [] []
-                , text "更新の際には、戸塚のTwitter（"
-                , a [ href "https://twitter.com/y047aka", target "_blank" ] [ text "@y047aka" ]
-                , text "）から情報発信予定"
-                ]
             ]
         ]
 
@@ -292,9 +291,16 @@ connpass =
     section [ id "connpass", class "section" ]
         [ div [ class "container" ]
             [ h1 [ class "title" ] [ text "参加登録" ]
-            , p []
-                [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "connpass" ]
-                , text " から参加登録をしてください。"
+            , div [ class "content" ]
+                [ p []
+                    [ a [ href "https://elm-jp.connpass.com/event/156016/", target "_blank" ] [ text "connpass" ]
+                    , text " から参加登録をしてください。"
+                    ]
+                , p []
+                    [ text "ご不明な点があれば 戸塚孝高（"
+                    , a [ href "https://twitter.com/y047aka", target "_blank" ] [ text "@y047aka" ]
+                    , text "）までお問い合わせください。"
+                    ]
                 ]
             ]
         ]

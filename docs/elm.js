@@ -5167,22 +5167,50 @@ var $author$project$Page$Top$connpass = A2(
 							$elm$html$Html$text('参加登録')
 						])),
 					A2(
-					$elm$html$Html$p,
-					_List_Nil,
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('content')
+						]),
 					_List_fromArray(
 						[
 							A2(
-							$elm$html$Html$a,
+							$elm$html$Html$p,
+							_List_Nil,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$href('https://elm-jp.connpass.com/event/156016/'),
-									$elm$html$Html$Attributes$target('_blank')
-								]),
-							_List_fromArray(
-								[
-									$elm$html$Html$text('connpass')
+									A2(
+									$elm$html$Html$a,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$href('https://elm-jp.connpass.com/event/156016/'),
+											$elm$html$Html$Attributes$target('_blank')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('connpass')
+										])),
+									$elm$html$Html$text(' から参加登録をしてください。')
 								])),
-							$elm$html$Html$text(' から参加登録をしてください。')
+							A2(
+							$elm$html$Html$p,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('ご不明な点があれば 戸塚孝高（'),
+									A2(
+									$elm$html$Html$a,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$href('https://twitter.com/y047aka'),
+											$elm$html$Html$Attributes$target('_blank')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('@y047aka')
+										])),
+									$elm$html$Html$text('）までお問い合わせください。')
+								]))
 						]))
 				]))
 		]));
@@ -5886,30 +5914,6 @@ var $author$project$Page$Top$plan = A2(
 												]))
 										]))
 								]))
-						])),
-					A2(
-					$elm$html$Html$p,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('content')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('詳細が決定し次第、更新します'),
-							A2($elm$html$Html$br, _List_Nil, _List_Nil),
-							$elm$html$Html$text('更新の際には、戸塚のTwitter（'),
-							A2(
-							$elm$html$Html$a,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$href('https://twitter.com/y047aka'),
-									$elm$html$Html$Attributes$target('_blank')
-								]),
-							_List_fromArray(
-								[
-									$elm$html$Html$text('@y047aka')
-								])),
-							$elm$html$Html$text('）から情報発信予定')
 						]))
 				]))
 		]));
@@ -6065,9 +6069,9 @@ var $author$project$Page$Top$process = A2(
 																]),
 															_List_fromArray(
 																[
-																	$elm$html$Html$text('質疑応答 / コードリーディング（20 min）')
+																	$elm$html$Html$text('トーク（20 min）')
 																])),
-															$elm$html$Html$text('アイデアが形になるまでを徹底的に追っていきます')
+															$elm$html$Html$text('アイデアが形になるまでを追っていきます')
 														]))
 												]))
 										]))
@@ -6117,14 +6121,40 @@ var $author$project$Page$Top$process = A2(
 									$elm$html$Html$text('発表者の方へ')
 								])),
 							A2(
-							$elm$html$Html$p,
+							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('message-body has-background-light')
+									$elm$html$Html$Attributes$class('message-body content has-background-light')
 								]),
 							_List_fromArray(
 								[
-									$elm$html$Html$text('企画の性質上、ソースコードの公開にご協力ください')
+									A2(
+									$elm$html$Html$ul,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('無線LAN、プロジェクタ、各種変換アダプタ の利用が可能です')
+												])),
+											A2(
+											$elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('発表に使用するスライドは SpeakerDeck などのサービスにアップロードしてください')
+												])),
+											A2(
+											$elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text('企画の性質上、ソースコードの公開にご協力ください')
+												]))
+										]))
 								]))
 						]))
 				]))
