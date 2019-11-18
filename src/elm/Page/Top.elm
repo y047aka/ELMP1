@@ -10,8 +10,8 @@ view =
     [ siteHeader
     , main_ []
         [ hero
-        , process
         , introduction
+        , process
         , elmPackages
         , plan
         , connpass
@@ -26,8 +26,7 @@ siteHeader =
         [ h1 [ class "navbar-brand" ]
             [ a [ class "navbar-item title is-4", href "/" ] [ text "ELM P1" ] ]
         , nav [ class "navbar-menu navbar-end" ]
-            [ a [ class "navbar-item", href "#prototyping" ] [ text "Prototyping" ]
-            , a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
+            [ a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
             , a [ class "navbar-item", href "#plan" ] [ text "Plan" ]
             , a [ class "navbar-item", href "#connpass" ] [ text "参加登録" ]
             ]
@@ -41,6 +40,29 @@ hero =
             [ h1 [ class "title is-1" ] [ text "ELM P1" ]
             , h2 [ class "subtitle has-text-weight-bold" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
             , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
+            ]
+        ]
+
+
+introduction : Html msg
+introduction =
+    section [ id "prototyping", class "section" ]
+        [ div [ class "container" ]
+            [ div [ class "content" ]
+                [ p [] [ text "「Elm で何ができるのか？」という疑問の答えを探求するイベントです。" ]
+                , p []
+                    [ text "上級者向けのイベントのように見えますが、実は Elm が「わからない」人のことを考えて計画しました。"
+                    , text "トップクラスの Elm 開発者たちの話を、会場が一体となって解き明かします。"
+                    , text "きっと「わからない」が「わかる！」に変わっていく面白さを体験できると思います。"
+                    ]
+                , p []
+                    [ text "Elm Meetup in Summer に引き続き、今回も Fringe81 さんに会場協力をしていただきました。"
+                    , text "さらにドイツからは elm-physics や elm-webgl の開発者：Andrey Kuzmin（"
+                    , a [ href "https://twitter.com/unsoundscapes", target "_blank" ] [ text "@unsoundscapes" ]
+                    , text "）さんが、来日予定です。"
+                    ]
+                , p [] [ text "実験的な要素が大きいイベントですが、ぜひご参加ください！" ]
+                ]
             ]
         ]
 
@@ -93,30 +115,6 @@ process =
                         , li [] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
                         ]
                     ]
-                ]
-            ]
-        ]
-
-
-introduction : Html msg
-introduction =
-    section [ id "prototyping", class "section" ]
-        [ div [ class "container" ]
-            [ h1 [ class "title" ] [ text "Prototyping" ]
-            , div [ class "content" ]
-                [ p []
-                    [ text "通常のイベントでは、より多くの人が理解できるテーマの設定が重要です。"
-                    , text "この制約を外した時に何が起こるのでしょうか。"
-                    , text "Elm のより尖ったイベントを実施したいと思い、プロトタイピングのためのイベントを企画しました。"
-                    ]
-                , p [] [ text "今回の ELMP1 では、ときに荒削りなプロトタイピングの情報をターゲットにします。" ]
-                , p []
-                    [ text "もしかしたら、敷居の高いイベントになってしまうかもしれません。"
-                    , text "トップクラスの Elm 開発者の話を、聴衆が一丸となって解き明かしていくようなイベントになれば面白いと考えています。"
-                    , text "ある意味では、上級者の「わかる」よりも、初級者の「わからない」が重要なイベントになるでしょう。"
-                    , text "時間が足りなかった場合や、反響が大きかった内容については、後日ハンズオンを企画するなどしてサポートしていきます。"
-                    ]
-                , p [] [ text "実験的な要素が大きいイベントですが、ぜひ参加してみてください。" ]
                 ]
             ]
         ]
@@ -301,6 +299,30 @@ connpass =
                     , a [ href "https://twitter.com/y047aka", target "_blank" ] [ text "@y047aka" ]
                     , text "）までお問い合わせください。"
                     ]
+                ]
+            ]
+        ]
+
+
+poem : Html msg
+poem =
+    section [ id "poem", class "section" ]
+        [ div [ class "container" ]
+            [ h1 [ class "title" ] [ text "Prototyping" ]
+            , div [ class "content" ]
+                [ p []
+                    [ text "通常のイベントでは、より多くの人が理解できるテーマの設定が重要です。"
+                    , text "この制約を外した時に何が起こるのでしょうか。"
+                    , text "Elm のより尖ったイベントを実施したいと思い、プロトタイピングのためのイベントを企画しました。"
+                    ]
+                , p [] [ text "今回の ELMP1 では、ときに荒削りなプロトタイピングの情報をターゲットにします。" ]
+                , p []
+                    [ text "もしかしたら、敷居の高いイベントになってしまうかもしれません。"
+                    , text "トップクラスの Elm 開発者の話を、聴衆が一丸となって解き明かしていくようなイベントになれば面白いと考えています。"
+                    , text "ある意味では、上級者の「わかる」よりも、初級者の「わからない」が重要なイベントになるでしょう。"
+                    , text "時間が足りなかった場合や、反響が大きかった内容については、後日ハンズオンを企画するなどしてサポートしていきます。"
+                    ]
+                , p [] [ text "実験的な要素が大きいイベントですが、ぜひ参加してみてください。" ]
                 ]
             ]
         ]

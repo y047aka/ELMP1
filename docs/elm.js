@@ -5477,16 +5477,6 @@ var $author$project$Page$Top$introduction = A2(
 			_List_fromArray(
 				[
 					A2(
-					$elm$html$Html$h1,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('title')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Prototyping')
-						])),
-					A2(
 					$elm$html$Html$div,
 					_List_fromArray(
 						[
@@ -5499,33 +5489,43 @@ var $author$project$Page$Top$introduction = A2(
 							_List_Nil,
 							_List_fromArray(
 								[
-									$elm$html$Html$text('通常のイベントでは、より多くの人が理解できるテーマの設定が重要です。'),
-									$elm$html$Html$text('この制約を外した時に何が起こるのでしょうか。'),
-									$elm$html$Html$text('Elm のより尖ったイベントを実施したいと思い、プロトタイピングのためのイベントを企画しました。')
+									$elm$html$Html$text('「Elm で何ができるのか？」という疑問の答えを探求するイベントです。')
 								])),
 							A2(
 							$elm$html$Html$p,
 							_List_Nil,
 							_List_fromArray(
 								[
-									$elm$html$Html$text('今回の ELMP1 では、ときに荒削りなプロトタイピングの情報をターゲットにします。')
+									$elm$html$Html$text('上級者向けのイベントのように見えますが、実は Elm が「わからない」人のことを考えて計画しました。'),
+									$elm$html$Html$text('トップクラスの Elm 開発者たちの話を、会場が一体となって解き明かします。'),
+									$elm$html$Html$text('きっと「わからない」が「わかる！」に変わっていく面白さを体験できると思います。')
 								])),
 							A2(
 							$elm$html$Html$p,
 							_List_Nil,
 							_List_fromArray(
 								[
-									$elm$html$Html$text('もしかしたら、敷居の高いイベントになってしまうかもしれません。'),
-									$elm$html$Html$text('トップクラスの Elm 開発者の話を、聴衆が一丸となって解き明かしていくようなイベントになれば面白いと考えています。'),
-									$elm$html$Html$text('ある意味では、上級者の「わかる」よりも、初級者の「わからない」が重要なイベントになるでしょう。'),
-									$elm$html$Html$text('時間が足りなかった場合や、反響が大きかった内容については、後日ハンズオンを企画するなどしてサポートしていきます。')
+									$elm$html$Html$text('Elm Meetup in Summer に引き続き、今回も Fringe81 さんに会場協力をしていただきました。'),
+									$elm$html$Html$text('さらにドイツからは elm-physics や elm-webgl の開発者：Andrey Kuzmin（'),
+									A2(
+									$elm$html$Html$a,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$href('https://twitter.com/unsoundscapes'),
+											$elm$html$Html$Attributes$target('_blank')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('@unsoundscapes')
+										])),
+									$elm$html$Html$text('）さんが、来日予定です。')
 								])),
 							A2(
 							$elm$html$Html$p,
 							_List_Nil,
 							_List_fromArray(
 								[
-									$elm$html$Html$text('実験的な要素が大きいイベントですが、ぜひ参加してみてください。')
+									$elm$html$Html$text('実験的な要素が大きいイベントですが、ぜひご参加ください！')
 								]))
 						]))
 				]))
@@ -6222,17 +6222,6 @@ var $author$project$Page$Top$siteHeader = A2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item'),
-							$elm$html$Html$Attributes$href('#prototyping')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Prototyping')
-						])),
-					A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('navbar-item'),
 							$elm$html$Html$Attributes$href('#packages')
 						]),
 					_List_fromArray(
@@ -6270,7 +6259,7 @@ var $author$project$Page$Top$view = _List_fromArray(
 		$elm$html$Html$main_,
 		_List_Nil,
 		_List_fromArray(
-			[$author$project$Page$Top$hero, $author$project$Page$Top$process, $author$project$Page$Top$introduction, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan, $author$project$Page$Top$connpass])),
+			[$author$project$Page$Top$hero, $author$project$Page$Top$introduction, $author$project$Page$Top$process, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan, $author$project$Page$Top$connpass])),
 		$author$project$Page$Top$siteFooter
 	]);
 var $author$project$Main$view = function (_v0) {
