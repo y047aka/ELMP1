@@ -2,6 +2,7 @@ module Page.Top exposing (view)
 
 import Html exposing (Html, a, br, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, tbody, td, text, tfoot, th, thead, tr, ul)
 import Html.Attributes exposing (class, href, id, target)
+import P1 as Elmp1
 import Url.Builder exposing (crossOrigin)
 
 
@@ -24,7 +25,7 @@ siteHeader : Html msg
 siteHeader =
     header [ class "navbar is-spaced is-primary" ]
         [ h1 [ class "navbar-brand" ]
-            [ a [ class "navbar-item title is-4", href "/" ] [ text "ELM P1" ] ]
+            [ a [ class "navbar-item title is-4", href "/" ] [ Elmp1.logo 100 ] ]
         , nav [ class "navbar-menu navbar-end" ]
             [ a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
             , a [ class "navbar-item", href "#plan" ] [ text "Plan" ]
@@ -37,7 +38,7 @@ hero : Html msg
 hero =
     section [ class "hero is-medium is-primary" ]
         [ div [ class "hero-body container" ]
-            [ h1 [ class "title is-1" ] [ text "ELM P1" ]
+            [ h1 [ class "title is-1" ] [ Elmp1.logo 400 ]
             , h2 [ class "subtitle has-text-weight-bold" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
             , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
             ]
