@@ -6229,7 +6229,7 @@ var $author$project$Page$Top$siteHeader = A2(
 var $elm$html$Html$i = _VirtualDom_node('i');
 var $author$project$Page$Top$speakers = function () {
 	var listItem = function (_v0) {
-		var developer = _v0.developer;
+		var speaker = _v0.speaker;
 		var title = _v0.title;
 		var time = _v0.time;
 		return A2(
@@ -6241,7 +6241,7 @@ var $author$project$Page$Top$speakers = function () {
 			_List_fromArray(
 				[
 					A2(
-					$elm$html$Html$a,
+					$elm$html$Html$div,
 					_List_Nil,
 					_List_fromArray(
 						[
@@ -6297,7 +6297,7 @@ var $author$project$Page$Top$speakers = function () {
 														]),
 													_List_fromArray(
 														[
-															$elm$html$Html$text(developer)
+															$elm$html$Html$text(speaker)
 														]))
 												])),
 											A2(
@@ -6367,9 +6367,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{developer: 'Andrey Kuzmin', time: '13:30-', title: 'Elm で “ちゃぶ台返し” する方法'}),
+								{speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elm で “ちゃぶ台返し” する方法'}),
 								listItem(
-								{developer: 'Andrey Kuzmin', time: '14:00-', title: 'TBA'})
+								{speaker: 'Andrey Kuzmin', time: '14:00-', title: 'TBA'})
 							])),
 						A2(
 						$elm$html$Html$ul,
@@ -6380,9 +6380,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{developer: 'xxx', time: '14:30-', title: 'TBA'}),
+								{speaker: 'miyamo', time: '14:30-', title: 'TBA'}),
 								listItem(
-								{developer: 'xxx', time: '14:30-', title: 'TBA'})
+								{speaker: 'Cubbit', time: '15:30-', title: 'TBA'})
 							])),
 						A2(
 						$elm$html$Html$ul,
@@ -6393,9 +6393,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{developer: 'xxx', time: '16:00-', title: 'TBA'}),
+								{speaker: 'IzumiSy', time: '16:00-', title: 'TBA'}),
 								listItem(
-								{developer: 'xxx', time: '16:30-', title: 'TBA'})
+								{speaker: 'Luca', time: '16:30-', title: 'TBA'})
 							]))
 					]))
 			]));

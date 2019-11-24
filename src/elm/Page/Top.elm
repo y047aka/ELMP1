@@ -125,15 +125,15 @@ process =
 speakers : Html msg
 speakers =
     let
-        listItem { developer, title, time } =
+        listItem { speaker, title, time } =
             li [ class "column" ]
-                [ a []
+                [ div []
                     [ div [ class "message is-dark" ]
                         [ div [ class "message-body media has-background-light" ]
                             [ div [ class "media-content content" ]
                                 [ p [ class "is-size-7" ] [ text time ]
                                 , h1 [ class "title is-4" ] [ text title ]
-                                , h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text developer ]
+                                , h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text speaker ]
                                 ]
                             , div [ class "media-right icon" ]
                                 [ i [ class "fas fa-lg fa-angle-double-right" ] [] ]
@@ -150,36 +150,36 @@ speakers =
                 ]
             , ul [ class "columns" ]
                 [ listItem
-                    { developer = "Andrey Kuzmin"
+                    { speaker = "Andrey Kuzmin"
                     , title = "Elm で “ちゃぶ台返し” する方法"
                     , time = "13:30-"
                     }
                 , listItem
-                    { developer = "Andrey Kuzmin"
+                    { speaker = "Andrey Kuzmin"
                     , title = "TBA"
                     , time = "14:00-"
                     }
                 ]
             , ul [ class "columns" ]
                 [ listItem
-                    { developer = "xxx"
+                    { speaker = "miyamo"
                     , title = "TBA"
                     , time = "14:30-"
                     }
                 , listItem
-                    { developer = "xxx"
+                    { speaker = "Cubbit"
                     , title = "TBA"
-                    , time = "14:30-"
+                    , time = "15:30-"
                     }
                 ]
             , ul [ class "columns" ]
                 [ listItem
-                    { developer = "xxx"
+                    { speaker = "IzumiSy"
                     , title = "TBA"
                     , time = "16:00-"
                     }
                 , listItem
-                    { developer = "xxx"
+                    { speaker = "Luca"
                     , title = "TBA"
                     , time = "16:30-"
                     }
