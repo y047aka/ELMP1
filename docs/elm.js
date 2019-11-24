@@ -5214,206 +5214,7 @@ var $author$project$Page$Top$connpass = A2(
 						]))
 				]))
 		]));
-var $elm$html$Html$br = _VirtualDom_node('br');
-var $elm$url$Url$Builder$toQueryPair = function (_v0) {
-	var key = _v0.a;
-	var value = _v0.b;
-	return key + ('=' + value);
-};
-var $elm$url$Url$Builder$toQuery = function (parameters) {
-	if (!parameters.b) {
-		return '';
-	} else {
-		return '?' + A2(
-			$elm$core$String$join,
-			'&',
-			A2($elm$core$List$map, $elm$url$Url$Builder$toQueryPair, parameters));
-	}
-};
-var $elm$url$Url$Builder$crossOrigin = F3(
-	function (prePath, pathSegments, parameters) {
-		return prePath + ('/' + (A2($elm$core$String$join, '/', pathSegments) + $elm$url$Url$Builder$toQuery(parameters)));
-	});
 var $elm$html$Html$h2 = _VirtualDom_node('h2');
-var $elm$html$Html$i = _VirtualDom_node('i');
-var $elm$html$Html$li = _VirtualDom_node('li');
-var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $author$project$Page$Top$elmPackages = function () {
-	var listItem = function (_v0) {
-		var developer = _v0.developer;
-		var packageName = _v0.packageName;
-		var category = _v0.category;
-		return A2(
-			$elm$html$Html$li,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('column')
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$href(
-							A3(
-								$elm$url$Url$Builder$crossOrigin,
-								'https://package.elm-lang.org/packages',
-								_List_fromArray(
-									[developer, packageName, 'latest']),
-								_List_Nil)),
-							$elm$html$Html$Attributes$target('_blank')
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$div,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('message is-dark')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('message-body media has-background-light')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('media-content')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text(developer + ' /')
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title is-4')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text(packageName)
-														])),
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('is-size-7')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text(category)
-														]))
-												])),
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('media-right icon')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$i,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fas fa-lg fa-angle-double-right')
-														]),
-													_List_Nil)
-												]))
-										]))
-								]))
-						]))
-				]));
-	};
-	return A2(
-		$elm$html$Html$section,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$id('packages'),
-				$elm$html$Html$Attributes$class('section')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('container')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$h1,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('title')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('Packages')
-							])),
-						A2(
-						$elm$html$Html$p,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('content')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('Elm においても、様々なパッケージの開発がおこなわれています。'),
-								A2($elm$html$Html$br, _List_Nil, _List_Nil),
-								$elm$html$Html$text('これらのパッケージの最新情報も得られる場にしたいと考えています。')
-							])),
-						A2(
-						$elm$html$Html$ul,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('columns')
-							]),
-						_List_fromArray(
-							[
-								listItem(
-								{category: 'SVG', developer: 'elm-community', packageName: 'typed-svg'}),
-								listItem(
-								{category: '3DCG', developer: 'elm-explorations', packageName: 'webgl'}),
-								listItem(
-								{category: 'データ・ビジュアライゼーション', developer: 'gampleman', packageName: 'elm-visualization'})
-							])),
-						A2(
-						$elm$html$Html$ul,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('columns')
-							]),
-						_List_fromArray(
-							[
-								listItem(
-								{category: '地図', developer: 'gampleman', packageName: 'elm-mapbox'}),
-								listItem(
-								{category: '物理シミュレーション', developer: 'w0rm', packageName: 'elm-physics'}),
-								listItem(
-								{category: 'プレゼンテーション・ツール', developer: 'w0rm', packageName: 'elm-slice-show'})
-							]))
-					]))
-			]));
-}();
 var $elm_community$typed_svg$TypedSvg$Types$Fill = function (a) {
 	return {$: 'Fill', a: a};
 };
@@ -5749,7 +5550,7 @@ var $author$project$Page$Top$hero = A2(
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Elm を使ったプロトタイピングのためのイベント')
+							$elm$html$Html$text('Elm Prototype Series')
 						])),
 					A2(
 					$elm$html$Html$p,
@@ -5832,6 +5633,7 @@ var $author$project$Page$Top$introduction = A2(
 				]))
 		]));
 var $elm$html$Html$main_ = _VirtualDom_node('main');
+var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$table = _VirtualDom_node('table');
 var $elm$html$Html$tbody = _VirtualDom_node('tbody');
 var $elm$html$Html$td = _VirtualDom_node('td');
@@ -5909,35 +5711,6 @@ var $author$project$Page$Top$plan = A2(
 								]))
 						])),
 					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('message is-dark')
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$h1,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('message-header')
-								]),
-							_List_fromArray(
-								[
-									$elm$html$Html$text('注意！')
-								])),
-							A2(
-							$elm$html$Html$p,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('message-body has-background-light')
-								]),
-							_List_fromArray(
-								[
-									$elm$html$Html$text('13:00 までに必ず入場してください')
-								]))
-						])),
-					A2(
 					$elm$html$Html$table,
 					_List_fromArray(
 						[
@@ -5986,14 +5759,33 @@ var $author$project$Page$Top$plan = A2(
 											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('12:30-')
+													$elm$html$Html$text('12:30 - 13:00')
 												])),
 											A2(
 											$elm$html$Html$td,
-											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('開場')
+													$elm$html$Html$Attributes$class('content')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$p,
+													_List_Nil,
+													_List_fromArray(
+														[
+															$elm$html$Html$text('開場')
+														])),
+													A2(
+													$elm$html$Html$p,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('has-text-primary')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text('注意：13:00 までに必ず入場してください')
+														]))
 												]))
 										])),
 									A2(
@@ -6001,20 +5793,12 @@ var $author$project$Page$Top$plan = A2(
 									_List_Nil,
 									_List_fromArray(
 										[
-											A2($elm$html$Html$td, _List_Nil, _List_Nil),
-											A2($elm$html$Html$td, _List_Nil, _List_Nil)
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
 											A2(
 											$elm$html$Html$td,
 											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('13:00-')
+													$elm$html$Html$text('13:05 - 13:25')
 												])),
 											A2(
 											$elm$html$Html$td,
@@ -6029,27 +5813,19 @@ var $author$project$Page$Top$plan = A2(
 									_List_Nil,
 									_List_fromArray(
 										[
-											A2($elm$html$Html$td, _List_Nil, _List_Nil),
-											A2($elm$html$Html$td, _List_Nil, _List_Nil)
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
 											A2(
 											$elm$html$Html$td,
 											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('13:30-')
+													$elm$html$Html$text('13:30 - 15:00')
 												])),
 											A2(
 											$elm$html$Html$td,
 											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('Stint: 1')
+													$elm$html$Html$text('Race 1')
 												]))
 										])),
 									A2(
@@ -6062,130 +5838,14 @@ var $author$project$Page$Top$plan = A2(
 											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('14:00-')
+													$elm$html$Html$text('15:30 - 17:00')
 												])),
 											A2(
 											$elm$html$Html$td,
 											_List_Nil,
 											_List_fromArray(
 												[
-													$elm$html$Html$text('Stint: 2')
-												]))
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('14:30-')
-												])),
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('Stint: 3')
-												]))
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2($elm$html$Html$td, _List_Nil, _List_Nil),
-											A2($elm$html$Html$td, _List_Nil, _List_Nil)
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('15:30-')
-												])),
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('Stint: 4')
-												]))
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('16:00-')
-												])),
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('Stint: 5')
-												]))
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('16:30-')
-												])),
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('Stint: 6')
-												]))
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2($elm$html$Html$td, _List_Nil, _List_Nil),
-											A2($elm$html$Html$td, _List_Nil, _List_Nil)
-										])),
-									A2(
-									$elm$html$Html$tr,
-									_List_Nil,
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('17:00-')
-												])),
-											A2(
-											$elm$html$Html$td,
-											_List_Nil,
-											_List_fromArray(
-												[
-													$elm$html$Html$text('懇親会')
+													$elm$html$Html$text('Race 2')
 												]))
 										]))
 								])),
@@ -6218,6 +5878,8 @@ var $author$project$Page$Top$plan = A2(
 						]))
 				]))
 		]));
+var $elm$html$Html$li = _VirtualDom_node('li');
+var $elm$html$Html$ul = _VirtualDom_node('ul');
 var $author$project$Page$Top$process = A2(
 	$elm$html$Html$section,
 	_List_fromArray(
@@ -6523,11 +6185,11 @@ var $author$project$Page$Top$siteHeader = A2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item'),
-							$elm$html$Html$Attributes$href('#packages')
+							$elm$html$Html$Attributes$href('#speakers')
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Packages')
+							$elm$html$Html$text('Speakers')
 						])),
 					A2(
 					$elm$html$Html$a,
@@ -6553,6 +6215,180 @@ var $author$project$Page$Top$siteHeader = A2(
 						]))
 				]))
 		]));
+var $elm$html$Html$i = _VirtualDom_node('i');
+var $author$project$Page$Top$speakers = function () {
+	var listItem = function (_v0) {
+		var developer = _v0.developer;
+		var title = _v0.title;
+		var time = _v0.time;
+		return A2(
+			$elm$html$Html$li,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('column')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$a,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('message is-dark')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('message-body media has-background-light')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('media-content content')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$p,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('is-size-7')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text(time)
+														])),
+													A2(
+													$elm$html$Html$h1,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('title is-4')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text(title)
+														])),
+													A2(
+													$elm$html$Html$h2,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
+														]),
+													_List_fromArray(
+														[
+															$elm$html$Html$text(developer)
+														]))
+												])),
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('media-right icon')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$i,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('fas fa-lg fa-angle-double-right')
+														]),
+													_List_Nil)
+												]))
+										]))
+								]))
+						]))
+				]));
+	};
+	return A2(
+		$elm$html$Html$section,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$id('speakers'),
+				$elm$html$Html$Attributes$class('section')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('container')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h1,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('title')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Speakers')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('content')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('今回の登壇者と発表テーマ')
+							])),
+						A2(
+						$elm$html$Html$ul,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('columns')
+							]),
+						_List_fromArray(
+							[
+								listItem(
+								{developer: 'Andrey Kuzmin', time: '13:30-', title: 'Elm で “ちゃぶ台返し” する方法'}),
+								listItem(
+								{developer: 'Andrey Kuzmin', time: '14:00-', title: 'TBA'})
+							])),
+						A2(
+						$elm$html$Html$ul,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('columns')
+							]),
+						_List_fromArray(
+							[
+								listItem(
+								{developer: 'xxx', time: '14:30-', title: 'TBA'}),
+								listItem(
+								{developer: 'xxx', time: '14:30-', title: 'TBA'})
+							])),
+						A2(
+						$elm$html$Html$ul,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('columns')
+							]),
+						_List_fromArray(
+							[
+								listItem(
+								{developer: 'xxx', time: '16:00-', title: 'TBA'}),
+								listItem(
+								{developer: 'xxx', time: '16:30-', title: 'TBA'})
+							]))
+					]))
+			]));
+}();
 var $author$project$Page$Top$view = _List_fromArray(
 	[
 		$author$project$Page$Top$siteHeader,
@@ -6560,7 +6396,7 @@ var $author$project$Page$Top$view = _List_fromArray(
 		$elm$html$Html$main_,
 		_List_Nil,
 		_List_fromArray(
-			[$author$project$Page$Top$hero, $author$project$Page$Top$introduction, $author$project$Page$Top$process, $author$project$Page$Top$elmPackages, $author$project$Page$Top$plan, $author$project$Page$Top$connpass])),
+			[$author$project$Page$Top$hero, $author$project$Page$Top$introduction, $author$project$Page$Top$process, $author$project$Page$Top$speakers, $author$project$Page$Top$plan, $author$project$Page$Top$connpass])),
 		$author$project$Page$Top$siteFooter
 	]);
 var $author$project$Main$view = function (_v0) {

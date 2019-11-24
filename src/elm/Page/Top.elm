@@ -13,7 +13,7 @@ view =
         [ hero
         , introduction
         , process
-        , elmPackages
+        , speakers
         , plan
         , connpass
         ]
@@ -27,7 +27,7 @@ siteHeader =
         [ h1 [ class "navbar-brand" ]
             [ a [ class "navbar-item title is-4", href "/ELMP1" ] [ Elmp1.logo 90 ] ]
         , nav [ class "navbar-menu navbar-end" ]
-            [ a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
+            [ a [ class "navbar-item", href "#speakers" ] [ text "Speakers" ]
             , a [ class "navbar-item", href "#plan" ] [ text "Plan" ]
             , a [ class "navbar-item", href "#connpass" ] [ text "参加登録" ]
             ]
@@ -39,7 +39,7 @@ hero =
     section [ class "hero is-medium is-primary" ]
         [ div [ class "hero-body container" ]
             [ h1 [ class "title is-1" ] [ Elmp1.logo 400 ]
-            , h2 [ class "subtitle has-text-weight-bold" ] [ text "Elm を使ったプロトタイピングのためのイベント" ]
+            , h2 [ class "subtitle has-text-weight-bold" ] [ text "Elm Prototype Series" ]
             , p [] [ text "2019年12月7日 13:00〜, 六本木にて" ]
             ]
         ]
@@ -116,6 +116,72 @@ process =
                         , li [] [ text "企画の性質上、ソースコードの公開にご協力ください" ]
                         ]
                     ]
+                ]
+            ]
+        ]
+
+
+speakers : Html msg
+speakers =
+    let
+        listItem { developer, title, time } =
+            li [ class "column" ]
+                [ a []
+                    [ div [ class "message is-dark" ]
+                        [ div [ class "message-body media has-background-light" ]
+                            [ div [ class "media-content content" ]
+                                [ p [ class "is-size-7" ] [ text time ]
+                                , h1 [ class "title is-4" ] [ text title ]
+                                , h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text developer ]
+                                ]
+                            , div [ class "media-right icon" ]
+                                [ i [ class "fas fa-lg fa-angle-double-right" ] [] ]
+                            ]
+                        ]
+                    ]
+                ]
+    in
+    section [ id "speakers", class "section" ]
+        [ div [ class "container" ]
+            [ h1 [ class "title" ] [ text "Speakers" ]
+            , p [ class "content" ]
+                [ text "今回の登壇者と発表テーマ"
+                ]
+            , ul [ class "columns" ]
+                [ listItem
+                    { developer = "Andrey Kuzmin"
+                    , title = "Elm で “ちゃぶ台返し” する方法"
+                    , time = "13:30-"
+                    }
+                , listItem
+                    { developer = "Andrey Kuzmin"
+                    , title = "TBA"
+                    , time = "14:00-"
+                    }
+                ]
+            , ul [ class "columns" ]
+                [ listItem
+                    { developer = "xxx"
+                    , title = "TBA"
+                    , time = "14:30-"
+                    }
+                , listItem
+                    { developer = "xxx"
+                    , title = "TBA"
+                    , time = "14:30-"
+                    }
+                ]
+            , ul [ class "columns" ]
+                [ listItem
+                    { developer = "xxx"
+                    , title = "TBA"
+                    , time = "16:00-"
+                    }
+                , listItem
+                    { developer = "xxx"
+                    , title = "TBA"
+                    , time = "16:30-"
+                    }
                 ]
             ]
         ]
@@ -209,10 +275,6 @@ plan =
                     ]
                 , h2 [ class "title is-5" ] [ text "タイムテーブル" ]
                 ]
-            , div [ class "message is-dark" ]
-                [ h1 [ class "message-header" ] [ text "注意！" ]
-                , p [ class "message-body has-background-light" ] [ text "13:00 までに必ず入場してください" ]
-                ]
             , table [ class "table is-fullwidth" ]
                 [ thead []
                     [ tr []
@@ -222,56 +284,23 @@ plan =
                     ]
                 , tbody []
                     [ tr []
-                        [ td [] [ text "12:30-" ]
-                        , td [] [ text "開場" ]
+                        [ td [] [ text "12:30 - 13:00" ]
+                        , td [ class "content" ]
+                            [ p [] [ text "開場" ]
+                            , p [ class "has-text-primary" ] [ text "注意：13:00 までに必ず入場してください" ]
+                            ]
                         ]
                     , tr []
-                        [ td [] []
-                        , td [] []
-                        ]
-                    , tr []
-                        [ td [] [ text "13:00-" ]
+                        [ td [] [ text "13:05 - 13:25" ]
                         , td [] [ text "Warm up" ]
                         ]
                     , tr []
-                        [ td [] []
-                        , td [] []
+                        [ td [] [ text "13:30 - 15:00" ]
+                        , td [] [ text "Race 1" ]
                         ]
                     , tr []
-                        [ td [] [ text "13:30-" ]
-                        , td [] [ text "Stint: 1" ]
-                        ]
-                    , tr []
-                        [ td [] [ text "14:00-" ]
-                        , td [] [ text "Stint: 2" ]
-                        ]
-                    , tr []
-                        [ td [] [ text "14:30-" ]
-                        , td [] [ text "Stint: 3" ]
-                        ]
-                    , tr []
-                        [ td [] []
-                        , td [] []
-                        ]
-                    , tr []
-                        [ td [] [ text "15:30-" ]
-                        , td [] [ text "Stint: 4" ]
-                        ]
-                    , tr []
-                        [ td [] [ text "16:00-" ]
-                        , td [] [ text "Stint: 5" ]
-                        ]
-                    , tr []
-                        [ td [] [ text "16:30-" ]
-                        , td [] [ text "Stint: 6" ]
-                        ]
-                    , tr []
-                        [ td [] []
-                        , td [] []
-                        ]
-                    , tr []
-                        [ td [] [ text "17:00-" ]
-                        , td [] [ text "懇親会" ]
+                        [ td [] [ text "15:30 - 17:00" ]
+                        , td [] [ text "Race 2" ]
                         ]
                     ]
                 , tfoot []
