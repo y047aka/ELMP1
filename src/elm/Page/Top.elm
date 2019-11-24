@@ -156,7 +156,7 @@ speakers =
                     }
                 , listItem
                     { speaker = "Andrey Kuzmin"
-                    , title = "TBA"
+                    , title = "Improvised presentation about games in Elm"
                     , time = "14:00-"
                     }
                 ]

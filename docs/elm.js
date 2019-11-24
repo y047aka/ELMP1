@@ -6369,7 +6369,7 @@ var $author$project$Page$Top$speakers = function () {
 								listItem(
 								{speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elmで「ちゃぶ台返し」する方法'}),
 								listItem(
-								{speaker: 'Andrey Kuzmin', time: '14:00-', title: 'TBA'})
+								{speaker: 'Andrey Kuzmin', time: '14:00-', title: 'Improvised presentation about games in Elm'})
 							])),
 						A2(
 						$elm$html$Html$ul,
