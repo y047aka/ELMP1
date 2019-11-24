@@ -151,7 +151,7 @@ speakers =
             , ul [ class "columns" ]
                 [ listItem
                     { speaker = "Andrey Kuzmin"
-                    , title = "Elm で “ちゃぶ台返し” する方法"
+                    , title = "Elmで「ちゃぶ台返し」する方法"
                     , time = "13:30-"
                     }
                 , listItem

@@ -6367,7 +6367,7 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elm で “ちゃぶ台返し” する方法'}),
+								{speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elmで「ちゃぶ台返し」する方法'}),
 								listItem(
 								{speaker: 'Andrey Kuzmin', time: '14:00-', title: 'TBA'})
 							])),
