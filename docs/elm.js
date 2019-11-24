@@ -6503,11 +6503,11 @@ var $author$project$Page$Top$siteHeader = A2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item title is-4'),
-							$elm$html$Html$Attributes$href('/')
+							$elm$html$Html$Attributes$href('/ELMP1')
 						]),
 					_List_fromArray(
 						[
-							$author$project$P1$logo(100)
+							$author$project$P1$logo(90)
 						]))
 				])),
 			A2(

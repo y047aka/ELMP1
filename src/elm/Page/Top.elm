@@ -25,7 +25,7 @@ siteHeader : Html msg
 siteHeader =
     header [ class "navbar is-spaced is-primary" ]
         [ h1 [ class "navbar-brand" ]
-            [ a [ class "navbar-item title is-4", href "/" ] [ Elmp1.logo 100 ] ]
+            [ a [ class "navbar-item title is-4", href "/ELMP1" ] [ Elmp1.logo 90 ] ]
         , nav [ class "navbar-menu navbar-end" ]
             [ a [ class "navbar-item", href "#packages" ] [ text "Packages" ]
             , a [ class "navbar-item", href "#plan" ] [ text "Plan" ]
