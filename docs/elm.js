@@ -6185,6 +6185,17 @@ var $author$project$Page$Top$siteHeader = A2(
 					_List_fromArray(
 						[
 							$elm$html$Html$Attributes$class('navbar-item'),
+							$elm$html$Html$Attributes$href('#process')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Process')
+						])),
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('navbar-item'),
 							$elm$html$Html$Attributes$href('#speakers')
 						]),
 					_List_fromArray(
