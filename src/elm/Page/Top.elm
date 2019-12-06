@@ -125,18 +125,15 @@ process =
 speakers : Html msg
 speakers =
     let
-        listItem { speaker, title, time } =
-            li [ class "column" ]
+        listItem { time, speaker, title, description } =
+            li [ class "column is-half" ]
                 [ div []
                     [ div [ class "message is-dark" ]
-                        [ div [ class "message-body media has-background-light" ]
-                            [ div [ class "media-content content" ]
-                                [ p [ class "is-size-7" ] [ text time ]
-                                , h1 [ class "title is-4" ] [ text title ]
-                                , h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text speaker ]
-                                ]
-                            , div [ class "media-right icon" ]
-                                [ i [ class "fas fa-lg fa-angle-double-right" ] [] ]
+                        [ div [ class "message-body has-background-light content" ]
+                            [ p [ class "is-size-6" ] [ text time ]
+                            , h1 [ class "title is-4" ] [ text title ]
+                            , h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text speaker ]
+                            , p [] [ text description ]
                             ]
                         ]
                     ]
@@ -150,38 +147,38 @@ speakers =
                 ]
             , ul [ class "columns" ]
                 [ listItem
-                    { speaker = "Andrey Kuzmin"
+                    { time = "13:30-"
+                    , speaker = "Andrey Kuzmin"
                     , title = "Elmで「ちゃぶ台返し」する方法"
-                    , time = "13:30-"
+                    , description = ""
                     }
                 , listItem
-                    { speaker = "Andrey Kuzmin"
+                    { time = "14:00-"
+                    , speaker = "Andrey Kuzmin"
                     , title = "Improvised presentation about games in Elm"
-                    , time = "14:00-"
+                    , description = ""
                     }
                 ]
             , ul [ class "columns" ]
                 [ listItem
-                    { speaker = "miyamo"
-                    , title = "TBA"
-                    , time = "14:30-"
+                    { time = "14:30-"
+                    , speaker = "miyamo"
+                    , title = "ElmでRay Marchingする"
+                    , description = ""
                     }
                 , listItem
-                    { speaker = "Cubbit"
-                    , title = "TBA"
-                    , time = "15:30-"
+                    { time = "15:30-"
+                    , speaker = "Cubbit"
+                    , title = "ElmでつくるSVGエディタ"
+                    , description = ""
                     }
                 ]
             , ul [ class "columns" ]
                 [ listItem
-                    { speaker = "IzumiSy"
-                    , title = "TBA"
-                    , time = "16:00-"
-                    }
-                , listItem
-                    { speaker = "Luca"
-                    , title = "TBA"
-                    , time = "16:30-"
+                    { time = "16:30-"
+                    , speaker = "Luca"
+                    , title = "Iro iro: One year of Elm in 50 slides"
+                    , description = "From training material for colleagues and the community to videogames for my kids. From corporate applications to conferences. From masonry layout to 3D animations."
                     }
                 ]
             ]

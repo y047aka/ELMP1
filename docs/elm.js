@@ -6226,17 +6226,17 @@ var $author$project$Page$Top$siteHeader = A2(
 						]))
 				]))
 		]));
-var $elm$html$Html$i = _VirtualDom_node('i');
 var $author$project$Page$Top$speakers = function () {
 	var listItem = function (_v0) {
+		var time = _v0.time;
 		var speaker = _v0.speaker;
 		var title = _v0.title;
-		var time = _v0.time;
+		var description = _v0.description;
 		return A2(
 			$elm$html$Html$li,
 			_List_fromArray(
 				[
-					$elm$html$Html$Attributes$class('column')
+					$elm$html$Html$Attributes$class('column is-half')
 				]),
 			_List_fromArray(
 				[
@@ -6257,64 +6257,46 @@ var $author$project$Page$Top$speakers = function () {
 									$elm$html$Html$div,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('message-body media has-background-light')
+											$elm$html$Html$Attributes$class('message-body has-background-light content')
 										]),
 									_List_fromArray(
 										[
 											A2(
-											$elm$html$Html$div,
+											$elm$html$Html$p,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('media-content content')
+													$elm$html$Html$Attributes$class('is-size-6')
 												]),
 											_List_fromArray(
 												[
-													A2(
-													$elm$html$Html$p,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('is-size-7')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text(time)
-														])),
-													A2(
-													$elm$html$Html$h1,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('title is-4')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text(title)
-														])),
-													A2(
-													$elm$html$Html$h2,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
-														]),
-													_List_fromArray(
-														[
-															$elm$html$Html$text(speaker)
-														]))
+													$elm$html$Html$text(time)
 												])),
 											A2(
-											$elm$html$Html$div,
+											$elm$html$Html$h1,
 											_List_fromArray(
 												[
-													$elm$html$Html$Attributes$class('media-right icon')
+													$elm$html$Html$Attributes$class('title is-4')
 												]),
 											_List_fromArray(
 												[
-													A2(
-													$elm$html$Html$i,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('fas fa-lg fa-angle-double-right')
-														]),
-													_List_Nil)
+													$elm$html$Html$text(title)
+												])),
+											A2(
+											$elm$html$Html$h2,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('subtitle is-6 has-text-weight-semibold')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text(speaker)
+												])),
+											A2(
+											$elm$html$Html$p,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text(description)
 												]))
 										]))
 								]))
@@ -6367,9 +6349,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elmで「ちゃぶ台返し」する方法'}),
+								{description: '', speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elmで「ちゃぶ台返し」する方法'}),
 								listItem(
-								{speaker: 'Andrey Kuzmin', time: '14:00-', title: 'Improvised presentation about games in Elm'})
+								{description: '', speaker: 'Andrey Kuzmin', time: '14:00-', title: 'Improvised presentation about games in Elm'})
 							])),
 						A2(
 						$elm$html$Html$ul,
@@ -6380,9 +6362,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{speaker: 'miyamo', time: '14:30-', title: 'TBA'}),
+								{description: '', speaker: 'miyamo', time: '14:30-', title: 'ElmでRay Marchingする'}),
 								listItem(
-								{speaker: 'Cubbit', time: '15:30-', title: 'TBA'})
+								{description: '', speaker: 'Cubbit', time: '15:30-', title: 'ElmでつくるSVGエディタ'})
 							])),
 						A2(
 						$elm$html$Html$ul,
@@ -6393,9 +6375,7 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{speaker: 'IzumiSy', time: '16:00-', title: 'TBA'}),
-								listItem(
-								{speaker: 'Luca', time: '16:30-', title: 'TBA'})
+								{description: 'From training material for colleagues and the community to videogames for my kids. From corporate applications to conferences. From masonry layout to 3D animations.', speaker: 'Luca', time: '16:30-', title: 'Iro iro: One year of Elm in 50 slides'})
 							]))
 					]))
 			]));
