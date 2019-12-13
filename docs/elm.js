@@ -6226,12 +6226,15 @@ var $author$project$Page$Top$siteHeader = A2(
 						]))
 				]))
 		]));
+var $elm$html$Html$i = _VirtualDom_node('i');
+var $elm$html$Html$span = _VirtualDom_node('span');
 var $author$project$Page$Top$speakers = function () {
 	var listItem = function (_v0) {
 		var time = _v0.time;
 		var speaker = _v0.speaker;
 		var title = _v0.title;
 		var description = _v0.description;
+		var link = _v0.link;
 		return A2(
 			$elm$html$Html$li,
 			_List_fromArray(
@@ -6297,6 +6300,40 @@ var $author$project$Page$Top$speakers = function () {
 											_List_fromArray(
 												[
 													$elm$html$Html$text(description)
+												])),
+											A2(
+											$elm$html$Html$a,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('button is-dark'),
+													$elm$html$Html$Attributes$href(link),
+													$elm$html$Html$Attributes$target('_blank')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$span,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('icon is-small')
+														]),
+													_List_fromArray(
+														[
+															A2(
+															$elm$html$Html$i,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$class('fas fa-link')
+																]),
+															_List_Nil)
+														])),
+													A2(
+													$elm$html$Html$span,
+													_List_Nil,
+													_List_fromArray(
+														[
+															$elm$html$Html$text('発表資料')
+														]))
 												]))
 										]))
 								]))
@@ -6349,9 +6386,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{description: '', speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elmで「ちゃぶ台返し」する方法'}),
+								{description: '', link: 'https://unsoundscapes.com/slides/2019-12-07-how-to-flip-a-table-with-elm/', speaker: 'Andrey Kuzmin', time: '13:30-', title: 'Elmで「ちゃぶ台返し」する方法'}),
 								listItem(
-								{description: '', speaker: 'Andrey Kuzmin', time: '14:00-', title: 'Improvised presentation about games in Elm'})
+								{description: '', link: 'https://unsoundscapes.itch.io/', speaker: 'Andrey Kuzmin', time: '14:00-', title: 'Improvised presentation about games in Elm'})
 							])),
 						A2(
 						$elm$html$Html$ul,
@@ -6362,9 +6399,9 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{description: '', speaker: 'miyamo', time: '14:30-', title: 'ElmでRay Marchingする'}),
+								{description: '', link: 'https://docs.google.com/presentation/d/1FN4a_-x15pBJNy1VjJNXZlBsqC-bDDHFmw_oht3Zsd0/view', speaker: 'miyamo', time: '14:30-', title: 'ElmでRay Marchingする'}),
 								listItem(
-								{description: '', speaker: 'Cubbit', time: '15:30-', title: 'ElmでつくるSVGエディタ'})
+								{description: '', link: 'https://docs.google.com/presentation/d/12NQJ7ZrGRGGTw_CRQ1L7XyzOi2XewyYXbSS1s-KFiqY/view', speaker: 'Cubbit', time: '15:30-', title: 'ElmでつくるSVGエディタ'})
 							])),
 						A2(
 						$elm$html$Html$ul,
@@ -6375,7 +6412,7 @@ var $author$project$Page$Top$speakers = function () {
 						_List_fromArray(
 							[
 								listItem(
-								{description: 'From training material for colleagues and the community to videogames for my kids. From corporate applications to conferences. From masonry layout to 3D animations.', speaker: 'Luca', time: '16:30-', title: 'Iro iro: One year of Elm in 50 slides'})
+								{description: 'From training material for colleagues and the community to videogames for my kids. From corporate applications to conferences. From masonry layout to 3D animations.', link: 'https://drive.google.com/file/d/127O6pDnxOf--Cu_j8AAnbRe07_TJnkkB/view', speaker: 'Luca', time: '16:30-', title: 'Iro iro: One year of Elm in 50 slides'})
 							]))
 					]))
 			]));

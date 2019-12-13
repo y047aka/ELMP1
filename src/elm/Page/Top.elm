@@ -1,6 +1,6 @@
 module Page.Top exposing (view)
 
-import Html exposing (Html, a, br, div, footer, h1, h2, header, i, li, main_, nav, p, section, table, tbody, td, text, tfoot, th, thead, tr, ul)
+import Html exposing (Html, a, br, div, footer, h1, h2, header, i, li, main_, nav, p, section, span, table, tbody, td, text, tfoot, th, thead, tr, ul)
 import Html.Attributes exposing (class, href, id, target)
 import P1 as Elmp1
 import Url.Builder exposing (crossOrigin)
@@ -125,7 +125,7 @@ process =
 speakers : Html msg
 speakers =
     let
-        listItem { time, speaker, title, description } =
+        listItem { time, speaker, title, description, link } =
             li [ class "column is-half" ]
                 [ div []
                     [ div [ class "message is-dark" ]
@@ -134,6 +134,10 @@ speakers =
                             , h1 [ class "title is-4" ] [ text title ]
                             , h2 [ class "subtitle is-6 has-text-weight-semibold" ] [ text speaker ]
                             , p [] [ text description ]
+                            , a [ class "button is-dark", href link, target "_blank" ]
+                                [ span [ class "icon is-small" ] [ i [ class "fas fa-link" ] [] ]
+                                , span [] [ text "発表資料" ]
+                                ]
                             ]
                         ]
                     ]
@@ -151,12 +155,14 @@ speakers =
                     , speaker = "Andrey Kuzmin"
                     , title = "Elmで「ちゃぶ台返し」する方法"
                     , description = ""
+                    , link = "https://unsoundscapes.com/slides/2019-12-07-how-to-flip-a-table-with-elm/"
                     }
                 , listItem
                     { time = "14:00-"
                     , speaker = "Andrey Kuzmin"
                     , title = "Improvised presentation about games in Elm"
                     , description = ""
+                    , link = "https://unsoundscapes.itch.io/"
                     }
                 ]
             , ul [ class "columns" ]
@@ -165,12 +171,14 @@ speakers =
                     , speaker = "miyamo"
                     , title = "ElmでRay Marchingする"
                     , description = ""
+                    , link = "https://docs.google.com/presentation/d/1FN4a_-x15pBJNy1VjJNXZlBsqC-bDDHFmw_oht3Zsd0/view"
                     }
                 , listItem
                     { time = "15:30-"
                     , speaker = "Cubbit"
                     , title = "ElmでつくるSVGエディタ"
                     , description = ""
+                    , link = "https://docs.google.com/presentation/d/12NQJ7ZrGRGGTw_CRQ1L7XyzOi2XewyYXbSS1s-KFiqY/view"
                     }
                 ]
             , ul [ class "columns" ]
@@ -179,6 +187,7 @@ speakers =
                     , speaker = "Luca"
                     , title = "Iro iro: One year of Elm in 50 slides"
                     , description = "From training material for colleagues and the community to videogames for my kids. From corporate applications to conferences. From masonry layout to 3D animations."
+                    , link = "https://drive.google.com/file/d/127O6pDnxOf--Cu_j8AAnbRe07_TJnkkB/view"
                     }
                 ]
             ]
